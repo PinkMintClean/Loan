@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCM Complete Lender Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat+Alternates:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight-navy: #060b1a;
+            --liquid-gold: #c5a400;
+            --ghost-white: #f5f5f5;
+            --cool-silver: #d1d1d1; /* Metallic Silver feel */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #000; color: var(--cool-silver); font-family: 'Montserrat Alternates', sans-serif; line-height: 1.25; }
+
+        .page {
+            max-width: 850px;
+            min-height: 1100px;
+            margin: 20px auto;
+            background-color: var(--midnight-navy);
+            border: 4px double var(--liquid-gold);
+            padding: 45px;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            page-break-after: always;
+            overflow: hidden;
+        }
+
+        /* Celestial subtle texture */
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        header { text-align: center; border-bottom: 2px solid var(--liquid-gold); padding-bottom: 15px; margin-bottom: 20px; }
+        h1 { font-family: 'Playfair Display', serif; color: var(--liquid-gold); font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--liquid-gold); font-size: 1.3rem; border-left: 4px solid var(--liquid-gold); padding-left: 12px; margin: 20px 0 10px 0; text-transform: uppercase; background: linear-gradient(90deg, rgba(197, 164, 0, 0.1), transparent); }
+        h3 { color: var(--liquid-gold); font-size: 1rem; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; }
+
+        .top-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--liquid-gold); font-weight: bold; margin-bottom: 5px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.8rem; }
+        th { background-color: var(--liquid-gold); color: #000; text-align: left; padding: 8px; text-transform: uppercase; border: 1px solid var(--midnight-navy); }
+        td { padding: 6px 8px; border: 1px solid rgba(197, 164, 0, 0.2); }
+        tr:nth-child(even) { background-color: rgba(255, 255, 255, 0.03); }
+
+        .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .data-block { border: 1px solid var(--liquid-gold); padding: 12px; background: rgba(0,0,0,0.4); }
+
+        .stat-highlight { color: var(--liquid-gold); font-weight: bold; font-size: 1.3rem; display: block; }
+        
+        .footer { position: absolute; bottom: 20px; left: 45px; right: 45px; text-align: center; font-size: 0.65rem; color: var(--cool-silver); border-top: 1px solid rgba(197, 164, 0, 0.3); padding-top: 8px; }
+        
+        .visual-bar-container { display: flex; align-items: flex-end; height: 120px; gap: 10px; border-bottom: 1px solid var(--liquid-gold); padding-bottom: 5px; margin: 15px 0; }
+        .visual-bar { background: var(--liquid-gold); flex: 1; position: relative; transition: height 0.3s; }
+        .visual-bar span { position: absolute; top: -18px; width: 100%; text-align: center; font-size: 0.7rem; font-weight: bold; color: var(--liquid-gold); }
+        .visual-label { text-align: center; font-size: 0.7rem; margin-top: 5px; }
+
+        .pledge-box { border: 2px solid var(--liquid-gold); padding: 25px; margin-top: 30px; background: rgba(0,0,0,0.5); text-align: center; }
+        .pledge-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--ghost-white); line-height: 1.6; }
+
+        .check-list { list-style: none; }
+        .check-list li { margin-bottom: 6px; font-size: 0.8rem; position: relative; padding-left: 20px; }
+        .check-list li::before { content: "gold"; color: var(--liquid-gold); position: absolute; left: 0; content: "■"; font-size: 0.6rem; top: 3px; }
+
+        @media print {
+            body { background: none; }
+            .page { margin: 0; box-shadow: none; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: EXECUTIVE SUMMARY -->
+    <div class="page">
+        <div class="top-meta"><span>LENDER PORTFOLIO</span><span>CONFIDENTIAL</span></div>
+        <header>
+            <h1>Urban Cinema Media LLC</h1>
+            <p style="color: var(--liquid-gold); font-weight: bold;">Caledonia, Mississippi | Golden Triangle Service Area</p>
+        </header>
+        
+        <h2>PAGE 1 — EXECUTIVE SUMMARY</h2>
+        <div class="data-block" style="margin-bottom: 20px;">
+            <p style="font-size: 0.9rem; margin-bottom: 15px;">Urban Cinema Media LLC requests a <strong>$2,000 short-term loan</strong> to fund the launch of a high-margin, community-driven outdoor cinema and food festival series. This project revitalizes local agritourism by blending cinematic entertainment with a vertically integrated food revenue model.</p>
+            <div class="data-grid">
+                <div>
+                    <h3>Financial Request</h3>
+                    <span class="stat-highlight">$2,000.00</span>
+                    <p style="font-size: 0.7rem;">Term: 90 Days</p>
+                </div>
+                <div>
+                    <h3>Growth Potential</h3>
+                    <span class="stat-highlight">185% ROI</span>
+                    <p style="font-size: 0.7rem;">Projected 12-Month Return</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Loan Strategic Purpose</h3>
+        <ul class="check-list">
+            <li>Acquisition of Industrial 20ft Cinema Infrastructure</li>
+            <li>Procurement of Commercial Concession Hardware (Popcorn/Slushie/Fryers)</li>
+            <li>Securing Public Performance Rights (PPR) for Film Licensing</li>
+            <li>Operational Runway for 5-Week Targeted Marketing Campaign</li>
+        </ul>
+
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PREPARED BY GABREALE RANDOLPH, CEO</footer>
+    </div>
+
+    <!-- PAGE 2: COMPANY OVERVIEW -->
+    <div class="page">
+        <h2>PAGE 2 — COMPANY OVERVIEW</h2>
+        <div class="data-grid">
+            <div class="data-block">
+                <h3>Entity Details</h3>
+                <p><strong>Entity:</strong> Urban Cinema Media LLC</p>
+                <p><strong>Structure:</strong> Single-member LLC</p>
+                <p><strong>Founded:</strong> 2024</p>
+                <p><strong>Owner:</strong> Gabreale Randolph</p>
+            </div>
+            <div class="data-block">
+                <h3>Service Geography</h3>
+                <ul class="check-list">
+                    <li>Columbus, MS</li>
+                    <li>West Point, MS</li>
+                    <li>Starkville, MS</li>
+                    <li>Tupelo, MS</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Mission Statement</h3>
+        <p style="font-style: italic; border-left: 2px solid var(--liquid-gold); padding-left: 15px; margin-bottom: 20px;">"To deliver immersive, community-centered cinematic experiences that transform local pastures into world-class entertainment destinations."</p>
+
+        <h3>Vision Statement</h3>
+        <p style="margin-bottom: 20px;">Establish Mississippi’s premier outdoor cinema brand, scaling from pilot events to a regional multi-city festival circuit that funds public transit infrastructure.</p>
+
+        <h3>Management Excellence</h3>
+        <p style="font-size: 0.85rem;">Led by Gabreale Randolph, an operations expert with mastery in retail logistics, POS systems, and inventory management. Her global professional background ensures institutional discipline in a local market.</p>
+        
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 02</footer>
+    </div>
+
+    <!-- PAGE 3: EVENT STRUCTURE -->
+    <div class="page">
+        <h2>PAGE 3 — EVENT STRUCTURE</h2>
+        <div class="data-block">
+            <h3>Frequency & Scaling</h3>
+            <table>
+                <tr><td>Initial Phase</td><td>2 Events Per Month (Bi-Weekly)</td></tr>
+                <tr><td>Expansion Phase</td><td>Weekly Events (Fri/Sat) Post-Month 3</td></tr>
+                <tr><td>Projected Attendance</td><td>200 Guests Per Event Avg.</td></tr>
+            </table>
+        </div>
+
+        <h3>Per-Event Revenue Architecture</h3>
+        <div class="data-grid">
+            <div class="data-block">
+                <h3>Ticket Revenue</h3>
+                <span class="stat-highlight">$2,000.00</span>
+                <p style="font-size: 0.7rem;">200 Guests @ $10/ticket</p>
+            </div>
+            <div class="data-block">
+                <h3>Concession Revenue</h3>
+                <span class="stat-highlight">$1,600.00</span>
+                <p style="font-size: 0.7rem;">Avg Spend: $8/head</p>
+            </div>
+        </div>
+
+        <div class="data-block" style="text-align: center; border: 2px solid var(--liquid-gold);">
+            <h3>Total Per-Event Gross Revenue</h3>
+            <span class="stat-highlight" style="font-size: 2rem;">$3,600.00</span>
+        </div>
+
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 03</footer>
+    </div>
+
+    <!-- PAGE 4: MONTH 1 FINANCIALS -->
+    <div class="page">
+        <h2>PAGE 4 — MONTH 1 FINANCIALS</h2>
+        <h3>Gross Revenue (2 Events)</h3>
+        <table>
+            <thead><tr><th>Category</th><th>Per Event</th><th>Monthly Total</th></tr></thead>
+            <tbody>
+                <tr><td>Ticket Sales</td><td>$2,000</td><td>$4,000</td></tr>
+                <tr><td>Food & Beverage</td><td>$1,600</td><td>$3,200</td></tr>
+                <tr style="font-weight: bold; color: var(--liquid-gold);"><td>GROSS REVENUE</td><td>$3,600</td><td>$7,200</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Operational Expenses (Month 1)</h3>
+        <table>
+            <thead><tr><th>Expense Type</th><th>Per Event</th><th>Monthly Total</th></tr></thead>
+            <tbody>
+                <tr><td>Film Licensing (Swank/Criterion)</td><td>$200</td><td>$400</td></tr>
+                <tr><td>Equipment Maintenance</td><td>$125</td><td>$250</td></tr>
+                <tr><td>Marketing & Promotion</td><td>$75</td><td>$150</td></tr>
+                <tr><td>Permits & Insurance</td><td>$50</td><td>$100</td></tr>
+                <tr><td>Staffing & Security</td><td>$150</td><td>$300</td></tr>
+                <tr><td>Food Supply & Vendor Fees</td><td>$250</td><td>$500</td></tr>
+                <tr><td>Overhead/Admin</td><td>$100</td><td>$200</td></tr>
+                <tr style="font-weight: bold;"><td>TOTAL EXPENSES</td><td>$950</td><td>$1,900</td></tr>
+            </tbody>
+        </table>
+
+        <div class="data-grid">
+            <div class="data-block"><h3>Month 1 Net Profit</h3><span class="stat-highlight">$5,300.00</span></div>
+            <div class="data-block"><h3>Net Margin</h3><span class="stat-highlight">73.6%</span></div>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 04</footer>
+    </div>
+
+    <!-- PAGE 5: MONTH 2 FINANCIALS -->
+    <div class="page">
+        <h2>PAGE 5 — MONTH 2 FINANCIALS</h2>
+        <p style="font-size: 0.8rem; margin-bottom: 10px;">Projected growth based on increased brand awareness and word-of-mouth referrals.</p>
+        <table>
+            <thead><tr><th>Category</th><th>Per Event</th><th>Monthly Total</th></tr></thead>
+            <tbody>
+                <tr><td>Ticket Sales</td><td>$2,200</td><td>$4,400</td></tr>
+                <tr><td>Food & Beverage</td><td>$1,800</td><td>$3,600</td></tr>
+                <tr style="font-weight: bold; color: var(--liquid-gold);"><td>GROSS REVENUE</td><td>$4,000</td><td>$8,000</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Operational Expenses (Month 2)</h3>
+        <table>
+            <tbody>
+                <tr><td>Film Licensing</td><td>$400</td></tr>
+                <tr><td>Marketing (Increased Spend)</td><td>$200</td></tr>
+                <tr><td>Staffing (Growth Adjusted)</td><td>$350</td></tr>
+                <tr><td>Supplies/Overhead</td><td>$1,150</td></tr>
+                <tr style="font-weight: bold;"><td>TOTAL EXPENSES</td><td>$2,100</td></tr>
+            </tbody>
+        </table>
+
+        <div class="data-grid">
+            <div class="data-block"><h3>Month 2 Net Profit</h3><span class="stat-highlight">$5,900.00</span></div>
+            <div class="data-block"><h3>Net Margin</h3><span class="stat-highlight">73.7%</span></div>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 05</footer>
+    </div>
+
+    <!-- PAGE 6: MONTH 3 FINANCIALS -->
+    <div class="page">
+        <h2>PAGE 6 — MONTH 3 FINANCIALS</h2>
+        <h3>Peak Pilot Performance (2 Events)</h3>
+        <table>
+            <thead><tr><th>Category</th><th>Per Event</th><th>Monthly Total</th></tr></thead>
+            <tbody>
+                <tr><td>Ticket Sales</td><td>$2,400</td><td>$4,800</td></tr>
+                <tr><td>Food & Beverage</td><td>$2,000</td><td>$4,000</td></tr>
+                <tr style="font-weight: bold; color: var(--liquid-gold);"><td>GROSS REVENUE</td><td>$4,400</td><td>$8,800</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Expenses & Net Analysis</h3>
+        <p style="font-size: 0.8rem;">Month 3 focuses on maximizing attendance through optimized marketing spend.</p>
+        <div class="data-grid">
+            <div class="data-block"><h3>Total Expenses</h3><span class="stat-highlight">$2,250.00</span></div>
+            <div class="data-block"><h3>Net Profit</h3><span class="stat-highlight">$6,550.00</span></div>
+        </div>
+        <div class="data-block" style="text-align: center;">
+            <h3>Month 3 Efficiency Rating</h3>
+            <span class="stat-highlight">74.4% Net Margin</span>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 06</footer>
+    </div>
+
+    <!-- PAGE 7: 90-DAY TOTALS -->
+    <div class="page">
+        <h2>PAGE 7 — 90-DAY TOTALS</h2>
+        <div class="data-block" style="margin-bottom: 20px;">
+            <p>Summary of the first quarter (Pilot Phase) operational performance.</p>
+        </div>
+        <table>
+            <thead><tr><th>Metric</th><th>Total Value</th></tr></thead>
+            <tbody>
+                <tr><td>Total Events Conducted</td><td>6</td></tr>
+                <tr><td>Aggregate Gross Revenue</td><td class="stat-highlight">$24,000.00</td></tr>
+                <tr><td>Aggregate Operational Expenses</td><td>$6,250.00</td></tr>
+                <tr style="background: rgba(197, 164, 0, 0.2);"><td><strong>TOTAL NET PROFIT</strong></td><td class="stat-highlight">$17,750.00</td></tr>
+                <tr><td>Average Net Margin</td><td>73.9%</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Capital Utilization Analysis</h3>
+        <p style="font-size: 0.85rem;">Every $1 of the requested $2,000 loan generates $8.87 in Net Profit within the first 90 days of operation.</p>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 07</footer>
+    </div>
+
+    <!-- PAGE 8: LOAN REPAYMENT PLAN -->
+    <div class="page">
+        <h2>PAGE 8 — LOAN REPAYMENT PLAN (90 DAYS)</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">A structured amortization schedule ensuring 100% debt retirement by Day 90.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Installment</th>
+                    <th>Principal</th>
+                    <th>Interest (5%)</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Month 1</td><td>$700</td><td>$667</td><td>$33</td><td>$1,333</td></tr>
+                <tr><td>Month 2</td><td>$700</td><td>$667</td><td>$33</td><td>$666</td></tr>
+                <tr><td>Month 3</td><td>$700</td><td>$666</td><td>$34</td><td>$0</td></tr>
+            </tbody>
+        </table>
+
+        <div class="data-grid">
+            <div class="data-block"><h3>Total Paid to Lender</h3><span class="stat-highlight">$2,100.00</span></div>
+            <div class="data-block"><h3>Status</h3><span class="stat-highlight" style="color: #00ff00;">FULLY SECURED</span></div>
+        </div>
+        
+        <h3>Collateral Assurance</h3>
+        <p style="font-size: 0.8rem;">Loan is secured by the underlying physical assets (Cinema Screen, Projector, Sound Rig) valued at $1,500+ and a general lien on LLC receivables.</p>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 08</footer>
+    </div>
+
+    <!-- PAGE 9: EXPENSE ALLOCATION -->
+    <div class="page">
+        <h2>PAGE 9 — EXPENSE ALLOCATION</h2>
+        <h3>Visual Breakdown of Capital Distribution</h3>
+        
+        <div class="data-block" style="margin-top: 20px;">
+            <div style="margin-bottom: 15px;">
+                <p><strong>Food Supply (30%)</strong></p>
+                <div style="width: 100%; height: 20px; border: 1px solid var(--liquid-gold);"><div style="width: 30%; height: 100%; background: var(--liquid-gold);"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <p><strong>Film Licensing (19%)</strong></p>
+                <div style="width: 100%; height: 20px; border: 1px solid var(--liquid-gold);"><div style="width: 19%; height: 100%; background: var(--liquid-gold);"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <p><strong>Staffing (17%)</strong></p>
+                <div style="width: 100%; height: 20px; border: 1px solid var(--liquid-gold);"><div style="width: 17%; height: 100%; background: var(--liquid-gold);"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <p><strong>Equipment (12%)</strong></p>
+                <div style="width: 100%; height: 20px; border: 1px solid var(--liquid-gold);"><div style="width: 12%; height: 100%; background: var(--liquid-gold);"></div></div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <p><strong>Marketing (10%)</strong></p>
+                <div style="width: 100%; height: 20px; border: 1px solid var(--liquid-gold);"><div style="width: 10%; height: 100%; background: var(--liquid-gold);"></div></div>
+            </div>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 09</footer>
+    </div>
+
+    <!-- PAGE 10: REVENUE GROWTH VISUALIZATION -->
+    <div class="page">
+        <h2>PAGE 10 — GROWTH VISUALIZATION</h2>
+        
+        <h3>Monthly Gross Revenue Trajectory</h3>
+        <div class="visual-bar-container">
+            <div class="visual-bar" style="height: 72%;"><span>$7,200</span></div>
+            <div class="visual-bar" style="height: 80%;"><span>$8,000</span></div>
+            <div class="visual-bar" style="height: 88%;"><span>$8,800</span></div>
+        </div>
+        <div style="display: flex; justify-content: space-around; font-size: 0.8rem; color: var(--liquid-gold);">
+            <div>Month 1</div><div>Month 2</div><div>Month 3</div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Net Profit By Month</h3>
+        <div class="visual-bar-container">
+            <div class="visual-bar" style="height: 53%;"><span>$5,300</span></div>
+            <div class="visual-bar" style="height: 59%;"><span>$5,900</span></div>
+            <div class="visual-bar" style="height: 65%;"><span>$6,550</span></div>
+        </div>
+        <div style="display: flex; justify-content: space-around; font-size: 0.8rem; color: var(--liquid-gold);">
+            <div>Month 1</div><div>Month 2</div><div>Month 3</div>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 10</footer>
+    </div>
+
+    <!-- PAGE 11: OVERHEAD DETAIL -->
+    <div class="page">
+        <h2>PAGE 11 — OVERHEAD & HIDDEN FEES DETAIL</h2>
+        <table>
+            <thead><tr><th>Category</th><th>Description</th><th>Monthly Cost</th></tr></thead>
+            <tbody>
+                <tr><td>Fuel & Transport</td><td>Vehicle fuel for heavy equipment haul</td><td>$100</td></tr>
+                <tr><td>Secure Storage</td><td>Climate-controlled rig storage</td><td>$50</td></tr>
+                <tr><td>Admin & Licensing</td><td>Banking, accounting, broadcast compliance</td><td>$25</td></tr>
+                <tr><td>Merchant Services</td><td>POS and online ticketing processing</td><td>$25</td></tr>
+                <tr style="font-weight: bold; color: var(--liquid-gold);">
+                    <td colspan="2">TOTAL FIXED OVERHEAD</td>
+                    <td>$200</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Efficiency Strategy</h3>
+        <p style="font-size: 0.85rem;">Fixed overhead is kept below 3% of gross revenue, ensuring that over 97% of income is available for variable costs, debt retirement, and profit distribution.</p>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 11</footer>
+    </div>
+
+    <!-- PAGE 12: SCALING PLAN -->
+    <div class="page">
+        <h2>PAGE 12 — SCALING PLAN</h2>
+        <div class="data-block">
+            <h3>The Road to Enterprise</h3>
+            <ul class="check-list">
+                <li><strong>Phase 1 (Months 1-3):</strong> Pilot - 2 Events/Mo. (Validation)</li>
+                <li><strong>Phase 2 (Months 4-6):</strong> Growth - 3 Events/Mo. (Expansion)</li>
+                <li><strong>Phase 3 (Months 7-12):</strong> Velocity - Weekly Fri/Sat Events</li>
+                <li><strong>Phase 4 (Year 2):</strong> Scale - Multi-city branding and regional festivals</li>
+            </ul>
+        </div>
+
+        <h3>Post-Scale Weekly Revenue (Est.)</h3>
+        <table>
+            <tr><td>Ticket Sales</td><td>$2,500</td></tr>
+            <tr><td>Food & Beverage</td><td>$2,000</td></tr>
+            <tr style="color: var(--liquid-gold); font-weight: bold;"><td>Weekly Gross</td><td>$4,500</td></tr>
+            <tr style="color: var(--liquid-gold); font-weight: bold;"><td>Monthly Net (4 Events)</td><td>$13,500</td></tr>
+        </table>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 12</footer>
+    </div>
+
+    <!-- PAGE 13: RISK MANAGEMENT -->
+    <div class="page">
+        <h2>PAGE 13 — RISK MANAGEMENT</h2>
+        <table>
+            <thead><tr><th>Risk Factor</th><th>Mitigation Strategy</th></tr></thead>
+            <tbody>
+                <tr><td>Weather Disruptions</td><td>Indoor backup venue partnerships & flexible rain-check scheduling.</td></tr>
+                <tr><td>Licensing Delays</td><td>Utilization of pre-approved annual film licensing packages.</td></tr>
+                <tr><td>Low Attendance</td><td>Hyper-local geo-targeted social media & Golden Triangle radio ads.</td></tr>
+                <tr><td>Equipment Failure</td><td>Redundant 4K projectors and backup sound rigs maintained on-site.</td></tr>
+                <tr><td>Vendor Shortages</td><td>Diverse network of food supplier contracts (local farms + wholesale).</td></tr>
+            </tbody>
+        </table>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 13</footer>
+    </div>
+
+    <!-- PAGE 14: COMMUNITY IMPACT -->
+    <div class="page">
+        <h2>PAGE 14 — COMMUNITY IMPACT</h2>
+        <div class="data-block">
+            <h3>Economic & Cultural Contribution</h3>
+            <ul class="check-list" style="font-size: 0.95rem;">
+                <li><strong>Local Wealth Creation:</strong> Strengthening local economies through local vendor participation (Small Business Incubator model).</li>
+                <li><strong>Cultural Enrichment:</strong> Providing family-friendly entertainment that fills the regional "entertainment desert."</li>
+                <li><strong>Tourism Catalyst:</strong> Encouraging regional tourism across the Columbus-Starkville-Tupelo corridor.</li>
+                <li><strong>Youth Opportunity:</strong> Creating part-time employment and management training for local youth.</li>
+            </ul>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 14</footer>
+    </div>
+
+    <!-- PAGE 15: THE PLEDGE -->
+    <div class="page">
+        <h2>PAGE 15 — THE GABREALE RANDOLPH PLEDGE</h2>
+        <div class="pledge-box">
+            <p class="pledge-text">
+                “I, Gabreale Randolph, pledge full accountability and transparency in the execution of this project. This loan will directly fund the infrastructure and licensing necessary to establish a profitable, community-centered entertainment enterprise. My goal is to build a safe, lucrative Oasis that benefits my children, my community, and my investors.”
+            </p>
+            <div style="margin-top: 50px; display: flex; justify-content: space-between; border-top: 1px solid var(--liquid-gold); padding-top: 10px;">
+                <span>Signature: ___________________________</span>
+                <span>Date: _________________</span>
+            </div>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PAGE 15</footer>
+    </div>
+
+    <!-- PAGE 16: APPENDIX -->
+    <div class="page">
+        <h2>PAGE 16 — APPENDIX</h2>
+        <div class="data-grid">
+            <div class="data-block">
+                <h3>A. Equipment List</h3>
+                <ul class="check-list">
+                    <li>20ft Inflatable Screen</li>
+                    <li>4K Industrial Projector</li>
+                    <li>Pro Sound System</li>
+                    <li>Generator & Lighting Rig</li>
+                    <li>Digital POS Suite</li>
+                </ul>
+            </div>
+            <div class="data-block">
+                <h3>B. Future Vendors</h3>
+                <ul class="check-list">
+                    <li>Columbus Eats</li>
+                    <li>Starkville Bites</li>
+                    <li>GT Coffee Co.</li>
+                    <li>Sweet Dreams Bakery</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="data-block" style="margin-top: 20px;">
+            <h3>C. Contact Information</h3>
+            <p><strong>Urban Cinema Media LLC</strong></p>
+            <p>Caledonia, Mississippi</p>
+            <p>Email: urbancinema.media@gmail.com</p>
+            <p>Phone: (662) 497-6601</p>
+        </div>
+
+        <footer class="footer">URBAN CINEMA MEDIA LLC | FINAL DOCUMENT</footer>
+    </div>
+
+</body>
+</html>
