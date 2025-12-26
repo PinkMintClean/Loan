@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCM Strategic Lender Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat+Alternates:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #050a18;
+            --gold: #c5a400;
+            --silver: #e0e0e0;
+            --glass: rgba(255, 255, 255, 0.04);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #000; color: var(--silver); font-family: 'Montserrat Alternates', sans-serif; line-height: 1.4; }
+
+        .page {
+            max-width: 900px;
+            min-height: 1150px;
+            margin: 20px auto;
+            background-color: var(--navy);
+            border: 8px double var(--gold);
+            padding: 50px;
+            position: relative;
+            box-shadow: 0 0 80px rgba(0,0,0,1);
+            page-break-after: always;
+        }
+
+        .page::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(197, 164, 0, 0.05) 1px, transparent 0);
+            background-size: 25px 25px;
+            pointer-events: none;
+        }
+
+        header { text-align: center; border-bottom: 3px solid var(--gold); padding-bottom: 15px; margin-bottom: 25px; }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 2.2rem; text-transform: uppercase; letter-spacing: 5px; }
+        h2 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.3rem; border-left: 8px solid var(--gold); padding-left: 15px; margin: 30px 0 15px 0; text-transform: uppercase; background: linear-gradient(90deg, rgba(197, 164, 0, 0.2), transparent); }
+        h3 { color: var(--gold); font-size: 1rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 0.85rem; }
+        th { background-color: var(--gold); color: #000; text-align: left; padding: 12px; text-transform: uppercase; border: 1px solid var(--navy); font-weight: 900; }
+        td { padding: 10px; border: 1px solid rgba(197, 164, 0, 0.3); vertical-align: middle; }
+        tr:nth-child(even) { background-color: var(--glass); }
+        .total-row { background: rgba(197, 164, 0, 0.25); font-weight: bold; color: var(--gold); }
+
+        .highlight-box { border: 1px dashed var(--gold); padding: 15px; margin: 15px 0; background: rgba(197, 164, 0, 0.05); font-size: 0.85rem; }
+        .footer { position: absolute; bottom: 20px; left: 50px; right: 50px; text-align: center; font-size: 0.7rem; color: var(--gold); opacity: 0.6; text-transform: uppercase; }
+        .high-vis { color: var(--gold); font-weight: bold; }
+        .tier-card { border: 1px solid var(--gold); padding: 20px; background: rgba(255,255,255,0.02); margin-bottom: 15px; }
+        .tier-title { color: var(--gold); font-weight: 900; font-size: 1.2rem; border-bottom: 1px solid var(--gold); margin-bottom: 10px; padding-bottom: 5px; }
+        .stamp { position: absolute; top: 60px; right: 60px; border: 3px solid #ff4d4d; color: #ff4d4d; padding: 10px; font-weight: 900; text-transform: uppercase; transform: rotate(15deg); opacity: 0.5; font-size: 0.8rem; }
+        
+        .menu-category { margin-top: 25px; }
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .menu-item { border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 10px; position: relative;}
+        .menu-item-name { font-weight: bold; color: #fff; font-size: 0.95rem; }
+        .menu-item-price { color: var(--gold); float: right; font-weight: bold; }
+        .menu-item-desc { font-size: 0.75rem; color: #aaa; font-style: italic; display: block; }
+        .upcharge { color: #4ade80; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: CAPITAL ALLOCATION -->
+    <div class="page">
+        <div class="stamp">Target Loan: $3,000</div>
+        <header>
+            <p style="color: var(--gold); font-size: 0.8rem; letter-spacing: 5px; margin-bottom: 5px;">STRATEGIC CAPITAL REQUEST</p>
+            <h1>Urban Cinema Media LLC</h1>
+        </header>
+
+        <h2>I. Institutional Procurement Audit</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">
+            Primary capital allocation for the 2026 Season. Capital is focused on <span class="high-vis">Revenue Assets</span> and <span class="high-vis">Sanitation Command</span>.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Specification / Purpose</th>
+                    <th>Investment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Cinematic Gear</strong></td><td>20ft Screen & Remote Projector Precision Mount</td><td>$239.00</td></tr>
+                <tr><td><strong>Concession Pillar 1</strong></td><td>8oz Popcorn Kettle & Cotton Candy Spinner</td><td>$340.00</td></tr>
+                <tr><td><strong>Concession Pillar 2</strong></td><td>Dual-Bowl Slushie & Double Fryer</td><td>$300.00</td></tr>
+                <tr><td><strong>Beverage Hubs</strong></td><td>(3) 3-Gallon Professional Pour Systems</td><td>$115.00</td></tr>
+                <tr><td><strong>GoBox Command</strong></td><td>Portable Potties & Sanitation/Sanitization Hub</td><td>$150.00</td></tr>
+                <tr><td><strong>Safety Lighting</strong></td><td>400ft Shatterproof Dimmable LED Runway</td><td>$200.00</td></tr>
+                <tr><td><strong>Media Tech</strong></td><td>FM Transmitter & High-Cap Offline Drive</td><td>$140.00</td></tr>
+                <tr><td><strong>VIP Logistics</strong></td><td>Dashboard Placards, Bins & A-Frame Board</td><td>$130.00</td></tr>
+                <tr><td><strong>Safety Gear</strong></td><td>LED Wands ($40), Vests ($30), Brand Decals ($20)</td><td>$90.00</td></tr>
+                <tr><td><strong>Hospitality Kit</strong></td><td>Packaging, Napkins, Hot-bags & Cleaning</td><td>$110.00</td></tr>
+                <tr><td><strong>Compliance</strong></td><td>Liability Insurance (Pilot Event Buffer)</td><td>$250.00</td></tr>
+                <tr><td><strong>Working Capital</strong></td><td>Raw Ingredients & Specialized Tools</td><td>$436.00</td></tr>
+                <tr><td><strong>Contingency</strong></td><td>Operational Buffer / Cash Reserve</td><td>$500.00</td></tr>
+                <tr class="total-row"><td><strong>TOTAL INVESTMENT</strong></td><td></td><td><strong>$3,000.00</strong></td></tr>
+            </tbody>
+        </table>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | PROCUREMENT DOSSIER</footer>
+    </div>
+
+    <!-- PAGE 2: ADMISSION HIERARCHY -->
+    <div class="page">
+        <h2>II. Revenue Tiers & Admission Policy</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 20px;">
+            A structured pricing model designed to incentivize early commitments and maximize per-vehicle revenue.
+        </p>
+
+        <div class="tier-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="tier-title">1. EARLY BIRD (MARKET CATALYST)</div>
+                <div class="high-vis">$10.00</div>
+            </div>
+            <ul style="font-size: 0.8rem; line-height: 1.6; padding-left: 20px;">
+                <li><strong>Volume Cap:</strong> Limited to the first 25 digital RSVPs per event.</li>
+                <li><strong>Stipulation:</strong> Pre-payment required; secures "Preferred Zone" seating.</li>
+                <li><strong>Benefit:</strong> Deepest discount offered to community early adopters.</li>
+            </ul>
+        </div>
+
+        <div class="tier-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="tier-title">2. GENERAL DOOR ADMISSION</div>
+                <div class="high-vis">$20.00</div>
+            </div>
+            <ul style="font-size: 0.8rem; line-height: 1.6; padding-left: 20px;">
+                <li><strong>Availability:</strong> Standard rate for impulse/night-of arrivals.</li>
+                <li><strong>Upgrade Path:</strong> Eligible for a $10.00 <span class="high-vis">VIP Oasis Upgrade</span> at the gate.</li>
+            </ul>
+        </div>
+
+        <div class="tier-card" style="border: 2px solid var(--gold); background: rgba(197,164,0,0.05);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="tier-title">3. VIP PREMIUM OASIS</div>
+                <div class="high-vis">$30.00</div>
+            </div>
+            <ul style="font-size: 0.8rem; line-height: 1.6; padding-left: 20px;">
+                <li><strong>Concierge Service:</strong> Exclusive door-to-door delivery of all fried favorites and drinks.</li>
+                <li><strong>Apex Placement:</strong> Guaranteed Row 1 viewing spots (Held until 15 min to showtime).</li>
+            </ul>
+        </div>
+
+        <footer class="footer">URBAN CINEMA MEDIA LLC | REVENUE TIER ARCHITECTURE</footer>
+    </div>
+
+    <!-- PAGE 3: ZONAL LOGISTICS -->
+    <div class="page">
+        <h2>III. Zonal Logistics & Marshalling Protocol</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 20px;">
+            A military-grade approach to vehicle placement ensures guest safety and viewing equity.
+        </p>
+
+        <h3>1. The Three-Zone Logic</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zone</th>
+                    <th>Placement</th>
+                    <th>Guest Profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Zone A (Apex)</strong></td><td>Rows 1 & 2</td><td>VIP Oasis Guests</td></tr>
+                <tr><td><strong>Zone B (Preferred)</strong></td><td>Rows 3 & 4</td><td>Early Bird Holders</td></tr>
+                <tr><td><strong>Zone C (General)</strong></td><td>Rows 5+</td><td>General Admission</td></tr>
+            </tbody>
+        </table>
+
+        <h3>2. The Grace Period Policy</h3>
+        <div class="highlight-box">
+            <p style="font-size: 0.85rem;">
+                - <span class="high-vis">VIP Oasis:</span> Spots held until 15 minutes before showtime.
+                <br>
+                - <span class="high-vis">Early Bird:</span> Spots held until 30 minutes before showtime.
+                <br><br>
+                Guests arriving after their grace period default to the General Zone to ensure a "No Backwards Movement" safety policy once the field is live.
+            </p>
+        </div>
+
+        <h3>3. Marshalling Safety Standards</h3>
+        <ul style="font-size: 0.85rem; line-height: 1.8; padding-left: 20px;">
+            <li><strong>Safety Runway:</strong> 400ft LED central path keeps pedestrians away from vehicles.</li>
+            <li><strong>Marshalling:</strong> Staff equipped with high-vis vests and LED traffic batons.</li>
+        </ul>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | SITE LOGISTICS</footer>
+    </div>
+
+    <!-- PAGE 4: GOURMET CONCESSION MANIFESTO -->
+    <div class="page">
+        <h2>IV. Gourmet Concession Manifesto</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 10px;">
+            Artisanal Southern menu focused on fresh ingredients, no sodas, and high-margin fried classics.
+        </p>
+
+        <div class="menu-category">
+            <h3>I. The Popcorn Hub (Kettle Fresh)</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-item-price">$6.00</span>
+                    <span class="menu-item-name">The Regular Popcorn</span>
+                    <span class="menu-item-desc">Freshly popped, lightly salted.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$10.00</span>
+                    <span class="menu-item-name">The Sharp Cheddar</span>
+                    <span class="menu-item-desc">Infused with real aged cheddar dust.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$10.00</span>
+                    <span class="menu-item-name">UCM Salted Caramel</span>
+                    <span class="menu-item-desc">Hand-glazed with premium cane sugar.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>II. Southern Fried & Smoke (The Pit)</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-item-price">$12.00</span>
+                    <span class="menu-item-name">Signature BBQ Wings (6)</span>
+                    <span class="menu-item-desc">Smoked & sauced. Served in hot-bags.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$9.00</span>
+                    <span class="menu-item-name">Fried Okra Basket</span>
+                    <span class="menu-item-desc">Crispy, Southern-style, flash-fried.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$10.00</span>
+                    <span class="menu-item-name">Smoked Drumlet Trio</span>
+                    <span class="menu-item-desc">Slow-roasted over hickory wood.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>III. Boutique Sweets & Frozen</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-item-price">$7.00</span>
+                    <span class="menu-item-name">Midnight Slushie</span>
+                    <span class="menu-item-desc">Regular cup. <span class="upcharge">+ $2.00 Gummy Bear/Worm Add-on</span></span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$8.00</span>
+                    <span class="menu-item-name">Waffle-on-a-Stick</span>
+                    <span class="menu-item-desc">Original. <span class="upcharge">+ $1.50 Choc/Nut Upcharge</span></span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$6.00</span>
+                    <span class="menu-item-name">Cotton Candy</span>
+                    <span class="menu-item-desc">Original. <span class="upcharge">+ $3.00 Glow-Stick Handle Option</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>IV. The Hydration Hub (Fresh & Natural)</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="menu-item-price">$6.00</span>
+                    <span class="menu-item-name">Signature Lemonade</span>
+                    <span class="menu-item-desc">Freshly squeezed with real lemon slices. No Soda.</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-item-price">$6.00</span>
+                    <span class="menu-item-name">UCM Fruit Punch</span>
+                    <span class="menu-item-desc">A natural, proprietary blend of real fruit juices.</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">URBAN CINEMA MEDIA LLC | CONCESSION MANIFESTO</footer>
+    </div>
+
+    <!-- PAGE 5: RETAIL MERCHANDISING -->
+    <div class="page">
+        <h2>V. Retail Merchandising & Staffing</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 15px;">
+            Converting site traffic into repetitive revenue through family-led hospitality.
+        </p>
+
+        <h3>1. The "Hero" Display</h3>
+        <p style="font-size: 0.85rem;">
+            The <strong>6-Jar Clarity Hub</strong> is the centerpiece. By allowing guests to *see* the texture and quality of the gourmet popcorn through crystal-clear glass, we drive appetite.
+        </p>
+
+        <h3>2. Atmospheric Sales</h3>
+        <p style="font-size: 0.85rem;">
+            Our <strong>Remote Dimmable LED Runway</strong> pulses the lights toward the concession hub, creating a psychological "path" for families to follow during intermission.
+        </p>
+
+        <h3>3. Generational Staffing Architecture</h3>
+        <p style="font-size: 0.85rem; margin-top: 15px;">
+            UCM is a family-managed enterprise. My daughters lead the concession hub operations. This ensures direct control over cash, inventory integrity, and high-speed Southern hospitality.
+        </p>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | RETAIL STRATEGY</footer>
+    </div>
+
+    <!-- PAGE 6: SANITATION & STEWARDSHIP -->
+    <div class="page">
+        <h2>VI. Sanitation Command & Site Stewardship</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 20px;">
+            Professional-grade site management ensures the health of guests and the preservation of host properties.
+        </p>
+
+        <h3>1. The GoBox (Sanitation Hub)</h3>
+        <p style="font-size: 0.85rem;">
+            Our <strong>GoBox Command</strong> is the site's most critical infrastructure. It serves as:
+            <br><br>
+            - **Hygiene HQ:** Housing Portable Potties and Sanitation Stations.
+            <br>
+            - **Sanitization Control:** Providing hand-wash stations and medical-grade cleaning supplies.
+            <br>
+            - **Asset Security:** A secure, weather-proof locker for all culinary and technical hardware.
+        </p>
+
+        <h3>2. Professional Technical Standards</h3>
+        <ul style="font-size: 0.85rem; line-height: 2;">
+            <li><strong>Remote Execution:</strong> Full control for dimmable lighting and projection.</li>
+            <li><strong>Offline Media Security:</strong> High-capacity drives bypass rural Wi-Fi instability.</li>
+            <li><strong>Pristine Exit:</strong> Industrial bins ensure the property is returned in original condition.</li>
+        </ul>
+
+        <div style="margin-top: 80px; text-align: center; border: 2px solid var(--gold); padding: 30px;">
+            <p style="font-family: 'Playfair Display'; font-style: italic; color: var(--gold); font-size: 1.1rem;">"Safety in Operations. Excellence in Hospitality."</p>
+            <p style="font-size: 0.9rem; font-weight: bold; margin-top: 15px; color: #fff;">GABREALE RANDOLPH, CEO & FOUNDER</p>
+            <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;">URBAN CINEMA MEDIA LLC</p>
+        </div>
+        <footer class="footer">URBAN CINEMA MEDIA LLC | FINAL INSTITUTIONAL PAGE</footer>
+    </div>
+
+</body>
+</html>
