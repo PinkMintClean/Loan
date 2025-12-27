@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCM Master Manifest - Venture Edition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>UCM Master Manifest - Print Safe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @page { size: 8.5in 11in; margin: 0; }
-        * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        /* FORCE SINGLE PAGE NO CUTOFF */
+        @page { 
+            size: 8.5in 11in; 
+            margin: 0; 
+        }
+        
+        * { 
+            box-sizing: border-box; 
+            -webkit-print-color-adjust: exact; 
+            print-color-adjust: exact; 
+        }
         
         body {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             background-color: #010409;
-            font-family: 'Inter', sans-serif;
-            display: flex; justify-content: center; align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Start at top */
             min-height: 100vh;
+            font-family: 'Inter', sans-serif;
         }
 
+        /* THE CANVAS - TIGHTENED HEIGHT FOR PRINT SAFETY */
         .magazine-canvas {
             width: 8.5in;
-            height: 11in;
+            height: 10.5in; /* Shortened by 0.5in to guarantee footer safety */
             background: linear-gradient(160deg, #020617 0%, #0f172a 35%, #1e1b4b 75%, #311d31 100%);
-            padding: 0.6in;
+            margin: 0.25in auto; /* Adds a small buffer around the whole sheet */
+            padding: 0.5in;
             display: grid;
             grid-template-columns: 1.8fr 1.2fr;
             grid-template-rows: auto 1fr auto;
-            gap: 20px;
+            gap: 15px;
             position: relative;
-            overflow: hidden;
             color: #fff;
-        }
-
-        /* Subtle Light Leak - Professional Rose */
-        .magazine-canvas::before {
-            content: "";
-            position: absolute;
-            top: -5%; right: -5%;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(190, 24, 93, 0.1) 0%, transparent 70%);
-            pointer-events: none;
+            border-radius: 2px;
         }
 
         header {
             grid-column: span 2;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 20px;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -52,104 +57,95 @@
 
         .brand-section h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 36pt;
+            font-size: 32pt;
             font-weight: 900;
             margin: 0;
             line-height: 0.9;
-            letter-spacing: -0.5pt;
             color: #fff;
         }
 
         .brand-section span {
-            font-size: 8pt;
-            letter-spacing: 4pt;
+            font-size: 7.5pt;
+            letter-spacing: 3pt;
             text-transform: uppercase;
             font-weight: 600;
-            color: #be185d; /* Deeper, professional rose */
-            margin-top: 8px;
+            color: #be185d;
+            margin-top: 5px;
             display: block;
         }
 
-        /* DATA ARCHITECTURE */
+        /* DATA PANELS */
         .panel {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 24px;
+            padding: 18px;
             border-radius: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .section-label {
-            font-size: 7.5pt;
+            font-size: 7pt;
             font-weight: 800;
-            letter-spacing: 2pt;
+            letter-spacing: 1.5pt;
             color: #be185d;
             text-transform: uppercase;
-            margin-bottom: 15px;
-            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 10px;
         }
 
-        table { width: 100%; border-collapse: collapse; font-size: 8pt; }
-        th { text-align: left; text-transform: uppercase; color: rgba(255,255,255,0.4); padding-bottom: 10px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.15); }
-        td { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+        th { text-align: left; text-transform: uppercase; color: rgba(255,255,255,0.4); padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        td { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
         
         .item-text { font-weight: 400; color: #e2e8f0; }
-        .price-text { text-align: right; font-weight: 800; color: #fff; font-size: 9pt; letter-spacing: 0.5pt; }
+        .price-text { text-align: right; font-weight: 800; color: #fff; font-size: 8.5pt; }
 
         /* SIDEBAR GALLERY */
-        .sidebar { display: flex; flex-direction: column; gap: 15px; }
+        .sidebar { display: flex; flex-direction: column; gap: 12px; }
 
         .editorial-panel {
             background: rgba(0, 0, 0, 0.2);
+            padding: 12px;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 15px;
         }
 
         .img-placeholder {
             width: 100%;
-            height: 95px;
+            height: 80px;
             background: #020617;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             border: 1px solid rgba(190, 24, 93, 0.2);
             display: flex; align-items: center; justify-content: center;
-            font-size: 6pt; color: #be185d; text-transform: uppercase; letter-spacing: 1.5pt;
+            font-size: 5.5pt; color: #be185d; text-transform: uppercase;
         }
 
-        .editorial-panel h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 13pt;
-            margin: 0 0 6px 0;
-            color: #fff;
-        }
+        .editorial-panel h4 { font-family: 'Playfair Display', serif; font-size: 11pt; margin: 0 0 4px 0; color: #fff; }
+        .editorial-panel p { font-size: 7.2pt; line-height: 1.4; color: rgba(255,255,255,0.5); margin: 0; }
 
-        .editorial-panel p {
-            font-size: 7.8pt;
-            line-height: 1.5;
-            color: rgba(255,255,255,0.5);
-            margin: 0;
-            font-weight: 300;
-        }
-
-        /* FOOTER */
+        /* FOOTER - LIFTED UP FOR SAFETY */
         footer {
             grid-column: span 2;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            padding-top: 20px;
+            padding-top: 15px;
+            margin-top: 5px;
             border-top: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px; /* Safe zone buffer */
         }
 
-        .total-container span { font-size: 9pt; text-transform: uppercase; letter-spacing: 3pt; color: #be185d; display: block; margin-bottom: 5px; }
-        .total-container strong { font-family: 'Playfair Display', serif; font-size: 42pt; line-height: 0.8; color: #fff; }
+        .total-container span { font-size: 8pt; text-transform: uppercase; letter-spacing: 2pt; color: #be185d; display: block; }
+        .total-container strong { font-family: 'Playfair Display', serif; font-size: 36pt; line-height: 0.8; color: #fff; }
 
-        .fine-print { font-size: 7pt; opacity: 0.4; line-height: 1.5; max-width: 320px; }
+        .fine-print { font-size: 6.5pt; opacity: 0.4; line-height: 1.4; max-width: 300px; }
 
         @media print {
             body { background: none; }
-            .magazine-canvas { box-shadow: none; margin: 0; }
+            .magazine-canvas { 
+                margin: 0; 
+                box-shadow: none;
+                height: 11in; /* Reset to full for the actual print engine */
+            }
         }
     </style>
 </head>
@@ -159,18 +155,17 @@
         <header>
             <div class="brand-section">
                 <h1>Urban Cinema</h1>
-                <span>Master Infrastructure Manifest</span>
+                <span>Strategic Infrastructure Manifest</span>
             </div>
-            <div style="text-align: right; font-size: 7pt; color: rgba(255,255,255,0.5); letter-spacing: 1pt;">
-                SECURE FILING: UCM-PRO-2026<br>
+            <div style="text-align: right; font-size: 6.5pt; color: rgba(255,255,255,0.4);">
+                REF: UCM-PRO-2026<br>
                 URBAN MEDIA LLC
             </div>
         </header>
 
         <div class="main-content">
-            <!-- Table 1: Organized High to Low -->
             <div class="panel">
-                <div class="section-label">I. Operational Machinery</div>
+                <div class="section-label">I. Operational Machinery (High to Low)</div>
                 <table>
                     <thead>
                         <tr><th style="width: 75%;">System Item</th><th style="text-align: right;">Valuation</th></tr>
@@ -191,7 +186,6 @@
                 </table>
             </div>
 
-            <!-- Table 2: Organized High to Low -->
             <div class="panel">
                 <div class="section-label">II. Logistics & Reserves</div>
                 <table>
@@ -208,27 +202,27 @@
 
         <div class="sidebar">
             <div class="editorial-panel">
-                <div class="img-placeholder">[ Visual: Infrastructure ]</div>
+                <div class="img-placeholder">[ 20FT Exhibition Screen ]</div>
                 <h4>High-Utilization Assets</h4>
-                <p>94% of procurement is directed toward physical assets with high durability ratings. Every piece of machinery is selected for rapid 30-minute deployment cycles.</p>
+                <p>94% of procurement is directed toward physical assets with high durability and rapid deployment cycles.</p>
             </div>
 
             <div class="editorial-panel">
-                <div class="img-placeholder">[ Visual: Safety Tech ]</div>
-                <h4>Safety as a Revenue Driver</h4>
-                <p>Standardized safety runway lighting creates a "Gate-to-Space" VIP experience, ensuring vehicle throughput is optimized during the critical 15-minute load-in window.</p>
+                <div class="img-placeholder">[ Safety Visuals ]</div>
+                <h4>Safety Excellence</h4>
+                <p>Standardized safety runway lighting creates a "Gate-to-Space" VIP experience, optimizing vehicle throughput.</p>
             </div>
 
             <div class="editorial-panel" style="border-left: 2px solid #be185d;">
                 <h4>Financial Integrity</h4>
-                <p>A $650 contingency reserve (21% of total) is maintained to ensure operational stability throughout the pilot event cycle, mitigating technical or logistics risks.</p>
+                <p>A $650 contingency reserve (21% of total) is maintained to ensure absolute operational stability.</p>
             </div>
         </div>
 
         <footer>
             <div class="fine-print">
                 <strong>Confidential Financial Document</strong><br>
-                This manifest is part of the UCM business expansion model. All valuations reflect current market procurement rates for industrial-grade event machinery.
+                Urban Media LLC. Proprietary valuations for industrial-grade event machinery. Authorized lender use only.
             </div>
             <div class="total-container">
                 <span>Total Procurement</span>
