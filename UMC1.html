@@ -3,236 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCM Executive Manifest</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>UCM Premiere Manifest - Magazine Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700;1,900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         @page { size: 8.5in 11in; margin: 0; }
         * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
         
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #010409;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0; padding: 0;
+            background-color: #02040a;
+            font-family: 'Montserrat', sans-serif;
+            display: flex; justify-content: center; align-items: center;
             min-height: 100vh;
-            font-family: 'Inter', sans-serif;
         }
 
-        /* THE RIGID CANVAS - CENTERED & SAFE */
-        .page-container {
+        .magazine-canvas {
             width: 8.5in;
             height: 11in;
-            background: linear-gradient(165deg, #020617 0%, #0f172a 45%, #1e1b4b 100%);
-            padding: 0.75in; /* Larger margins for print safety */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centering everything */
+            /* Midnight to Deep Twilight Violet Gradient */
+            background: linear-gradient(170deg, #050a18 0%, #0f172a 35%, #2d1b4b 75%, #4c1d3a 100%);
+            padding: 0.5in;
+            display: grid;
+            grid-template-columns: 1.7fr 1.3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
             position: relative;
             overflow: hidden;
-            color: #f8fafc;
+            color: #fff;
         }
 
-        /* HEADER SECTION */
+        /* Ambient "Cotton Candy" Glow */
+        .magazine-canvas::after {
+            content: "";
+            position: absolute;
+            top: -10%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(237, 100, 166, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* HEADER: Premiere Style */
         header {
-            width: 100%;
-            text-align: center; /* Centered Header */
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32pt;
-            font-weight: 900;
-            letter-spacing: -0.5pt;
-            margin: 0;
-            color: #fff;
-            text-transform: none; /* More serious than all-caps */
-        }
-
-        .tagline {
-            font-size: 9pt;
-            letter-spacing: 4pt;
-            text-transform: uppercase;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: 10px;
-        }
-
-        /* CENTERED GLASS TABLE */
-        .content-wrap {
-            width: 100%;
-            max-width: 6.5in;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            padding: 35px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 8.5pt; /* Slightly larger for legibility */
-        }
-
-        th {
-            text-align: left;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.5);
-            letter-spacing: 1.5pt;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 600;
-        }
-
-        td {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            color: #e2e8f0;
-        }
-
-        .price-col {
-            text-align: right;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        /* FOOTER / TOTAL SECTION - MOVED UP FOR SAFETY */
-        .footer-summary {
-            width: 100%;
-            max-width: 6.5in;
-            margin-top: 40px;
+            grid-column: span 2;
+            border-bottom: 3px solid #ed64a6;
+            padding-bottom: 15px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            padding-bottom: 50px; /* Safe distance from page edge */
         }
 
-        .total-callout {
-            text-align: right;
-        }
-
-        .total-callout span {
-            display: block;
-            font-size: 10pt;
-            text-transform: uppercase;
-            letter-spacing: 3pt;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 5px;
-        }
-
-        .total-callout strong {
+        .brand-section h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 38pt;
-            color: #fff;
-            line-height: 1;
+            font-size: 42pt;
+            font-style: italic;
+            font-weight: 900;
+            margin: 0;
+            line-height: 0.8;
+            letter-spacing: -1pt;
+            background: linear-gradient(to right, #fff, #ed64a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .disclaimer {
-            font-size: 7.5pt;
-            color: rgba(255, 255, 255, 0.3);
-            line-height: 1.5;
-            max-width: 3in;
-        }
-
-        /* DENSE SIDEBAR STYLED AS BOTTOM INSIGHTS */
-        .insight-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            width: 100%;
-            max-width: 6.5in;
-            margin-top: 25px;
-        }
-
-        .insight-item {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
-        }
-
-        .insight-item h4 {
-            font-size: 9pt;
+        .brand-section span {
+            font-size: 8.5pt;
+            letter-spacing: 5pt;
             text-transform: uppercase;
-            letter-spacing: 1pt;
-            margin: 0 0 5px 0;
-            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            color: #ed64a6;
+            margin-top: 10px;
+            display: block;
         }
 
-        .insight-item p {
-            font-size: 8pt;
+        /* MAIN DATA: The "Stern" math in a "Glass" box */
+        .manifest-data {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(237, 100, 166, 0.2);
+            padding: 20px;
+            border-radius: 2px;
+        }
+
+        .section-tab {
+            font-size: 7pt;
+            font-weight: 800;
+            letter-spacing: 2pt;
+            color: #ed64a6;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-tab::after { content: ""; flex-grow: 1; height: 1px; background: rgba(237, 100, 166, 0.3); }
+
+        table { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
+        th { text-align: left; text-transform: uppercase; color: rgba(255,255,255,0.5); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        td { padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        
+        .item-name { font-weight: 600; color: #f8fafc; }
+        .price-val { text-align: right; font-weight: 700; color: #ed64a6; font-family: 'Playfair Display', serif; font-size: 9pt; }
+
+        /* SIDEBAR: The "Evolution" Gallery */
+        .visual-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .editorial-block {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-left: 1px solid #ed64a6;
+        }
+
+        .img-frame {
+            width: 100%;
+            height: 100px;
+            background: rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            border: 1px solid rgba(237, 100, 166, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 6pt; text-transform: uppercase; letter-spacing: 1pt; color: #ed64a6;
+        }
+
+        .editorial-block h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 12pt;
+            font-style: italic;
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+
+        .editorial-block p {
+            font-size: 7.5pt;
             line-height: 1.4;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255,255,255,0.6);
             margin: 0;
         }
 
+        /* FOOTER: Professional Total */
+        footer {
+            grid-column: span 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 10px;
+        }
+
+        .total-stack span { font-size: 8pt; text-transform: uppercase; letter-spacing: 4pt; color: #ed64a6; display: block; }
+        .total-stack strong { font-family: 'Playfair Display', serif; font-size: 38pt; line-height: 0.8; }
+
+        .legal { font-size: 6.5pt; opacity: 0.4; line-height: 1.4; max-width: 300px; }
+
         @media print {
             body { background: none; }
-            .page-container { box-shadow: none; margin: 0; }
+            .magazine-canvas { box-shadow: none; margin: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="page-container">
+    <div class="magazine-canvas">
         <header>
-            <h1>Urban Cinema</h1>
-            <div class="tagline">Procurement & Strategic Infrastructure Manifest</div>
+            <div class="brand-section">
+                <h1>Urban Cinema</h1>
+                <span>Premiere Infrastructure Manifest</span>
+            </div>
+            <div style="text-align: right; font-size: 7pt; opacity: 0.6; letter-spacing: 1pt;">
+                ISSUE 01 // Q1 2026<br>
+                URBAN MEDIA LLC
+            </div>
         </header>
 
-        <div class="content-wrap">
+        <div class="manifest-data">
+            <div class="section-tab">Machinery & Visual Core</div>
             <table>
-                <thead>
-                    <tr>
-                        <th style="width: 70%;">Asset Specification</th>
-                        <th style="text-align: right;">Allocation</th>
-                    </tr>
-                </thead>
                 <tbody>
-                    <tr><td>20ft Pro-Exhibition Cinema Screen & Surface</td><td class="price-col">$150.00</td></tr>
-                    <tr><td>Remote Alignment Precision Mount & Stability Rigging</td><td class="price-col">$89.00</td></tr>
-                    <tr><td>8oz Industrial High-Output Popcorn Thermal Kettle</td><td class="price-col">$180.00</td></tr>
-                    <tr><td>Commercial Multi-Floss Cotton Candy Spinner Hub</td><td class="price-col">$160.00</td></tr>
-                    <tr><td>Double-Tank 24L Slushie System (Heat-Shielded)</td><td class="price-col">$199.00</td></tr>
-                    <tr><td>Industrial Stainless 12L Deep Fryer Unit</td><td class="price-col">$80.00</td></tr>
-                    <tr><td>Clarity Hub Array: (6) Shatterproof LED Exhibition Cases</td><td class="price-col">$90.00</td></tr>
-                    <tr><td>(3) 3-Gallon Professional High-Pressure Pouring Units</td><td class="price-col">$115.00</td></tr>
-                    <tr><td>FM Stereo Digital Master Transmitter & Media Hub</td><td class="price-col">$140.00</td></tr>
-                    <tr><td>GoBox Reinforced Site Management & Distro Unit</td><td class="price-col">$150.00</td></tr>
-                    <tr><td>400ft Shatterproof LED Safety Runway Lighting</td><td class="price-col">$200.00</td></tr>
-                    <tr><td>Soul-Fry Suite: Premium Inventory (Wings/Okra/Batter)</td><td class="price-col">$285.00</td></tr>
-                    <tr><td>Base Inventory: Kernels, Floss Sugar, Syrups, Infusions</td><td class="price-col">$192.00</td></tr>
-                    <tr><td>Operating Cash Contingency Reserve (16.6%)</td><td class="price-col">$770.00</td></tr>
+                    <tr><td class="item-name">20ft Pro-Exhibition Inflatable Screen</td><td class="price-val">$150.00</td></tr>
+                    <tr><td class="item-name">Remote Precision Mount & Rigging</td><td class="price-val">$89.00</td></tr>
+                    <tr><td class="item-name">8oz High-Output Popcorn Kettle</td><td class="price-val">$180.00</td></tr>
+                    <tr><td class="item-name">Commercial Multi-Floss Cotton Candy Hub</td><td class="price-val">$160.00</td></tr>
+                    <tr><td class="item-name">24L Double-Tank Slushie System</td><td class="price-val">$199.00</td></tr>
+                    <tr><td class="item-name">Industrial Stainless 12L Deep Fryer</td><td class="price-val">$80.00</td></tr>
+                    <tr><td class="item-name">Clarity Hub: (6) LED Display Cases</td><td class="price-val">$90.00</td></tr>
+                    <tr><td class="item-name">FM Stereo Digital Broadcast Hub</td><td class="price-val">$140.00</td></tr>
+                    <tr><td class="item-name">400ft LED Safety Runway String</td><td class="price-val">$200.00</td></tr>
+                </tbody>
+            </table>
+
+            <div class="section-tab" style="margin-top: 20px;">Hospitality & Marketing</div>
+            <table>
+                <tbody>
+                    <tr><td class="item-name">Soul-Fry Inventory (Wings/Okra/Batter)</td><td class="price-val">$285.00</td></tr>
+                    <tr><td class="item-name">Cinema Stock (Kernels/Sugars/Syrups)</td><td class="price-col price-val">$192.00</td></tr>
+                    <tr><td class="item-name">Vinyl Site Signage (Large Format Gate Banner)</td><td class="price-val">$200.00</td></tr>
+                    <tr><td class="item-name">Safety & Logistics (Vests/A-Frames)</td><td class="price-val">$185.00</td></tr>
+                    <tr><td class="item-name">Contingency Cash Reserve</td><td class="price-val">$850.00</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="insight-grid">
-            <div class="insight-item">
-                <h4>Asset Utilization</h4>
-                <p>92% of allocated capital is directed toward hard machinery with a projected 5-year operational lifespan.</p>
+        <div class="visual-sidebar">
+            <div class="editorial-block">
+                <div class="img-frame">[ Visual: 20FT Screen ]</div>
+                <h4>The Grand Canvas</h4>
+                <p>The centerpiece of the event. A 20ft exhibition-grade inflatable surface that turns any lot into a high-definition premier theater.</p>
             </div>
-            <div class="insight-item">
-                <h4>Revenue Scaling</h4>
-                <p>Infrastructure supports a 250% increase in concession throughput via the Clarity Hub protocol.</p>
+
+            <div class="editorial-block">
+                <div class="img-frame">[ Visual: Safety Lighting ]</div>
+                <h4>Neon Safety</h4>
+                <p>The 400ft LED runway lights guide guests to their VIP spots, blending essential safety with a neon "Premiere" aesthetic.</p>
+            </div>
+
+            <div class="editorial-block">
+                <div class="img-frame">[ Visual: Concessions ]</div>
+                <h4>Gourmet Drive-In</h4>
+                <p>Moving beyond basic snacks. The Soul-Fry suite and Clarity Hubs deliver a curated culinary experience under the twilight sky.</p>
             </div>
         </div>
 
-        <div class="footer-summary">
-            <div class="disclaimer">
-                <strong>Confidential Lender File</strong><br>
-                Urban Cinema Media LLC. Proprietary financial models and equipment audit. Authorized use only.
+        <footer>
+            <div class="legal">
+                <strong>Confidential Financial Document</strong><br>
+                Property of Urban Media LLC. This manifest outlines the tactical evolution of the Urban Cinema Media entertainment leg.
             </div>
-            <div class="total-callout">
-                <span>Total Allocation</span>
+            <div class="total-stack">
+                <span>Gross Procurement</span>
                 <strong>$3,000.00</strong>
             </div>
-        </div>
+        </footer>
     </div>
 
 </body>
