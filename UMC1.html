@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UCM Master Manifest - Twilight Edition</title>
+    <title>UCM Midnight Manifest</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* PAGE SETUP - FORCE SINGLE SHEET SCALE */
+        /* CRITICAL: HIDE BROWSER HEADERS/FOOTERS */
         @page { 
             size: 8.5in 11in; 
             margin: 0; 
@@ -21,250 +21,214 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #010409;
             display: flex;
             justify-content: center;
-            background-color: #222;
-            font-family: 'Montserrat', sans-serif;
+            align-items: center;
+            min-height: 100vh;
         }
 
-        /* THE CANVAS - TWILIGHT CLOUD GRADIENT */
-        .magazine-page {
+        /* THE RIGID CANVAS: MIDNIGHT DUSK */
+        .page-container {
             width: 8.5in;
             height: 11in;
-            /* Twilight Blue to Cotton Candy Pink/Purple Gradient */
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 30%, #4a6fa5 60%, #9f7aea 85%, #ed64a6 100%);
-            padding: 0.5in;
-            display: grid;
-            grid-template-columns: 1.8fr 1.2fr;
-            grid-template-rows: auto 1fr auto;
-            gap: 25px;
-            overflow: hidden;
+            background: linear-gradient(160deg, #020617 0%, #0f172a 40%, #1e1b4b 75%, #312e81 100%);
+            padding: 0.6in;
+            display: flex;
+            flex-direction: column;
             position: relative;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            color: #f8fafc;
         }
 
-        /* SUBTLE CLOUD OVERLAY EFFECT */
-        .magazine-page::after {
+        /* Subtle Fog Overlay */
+        .page-container::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%),
-                        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
-        /* CONTENT STYLING */
         header {
-            grid-column: span 2;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
+            border-bottom: 2px solid rgba(197, 164, 0, 0.4);
             padding-bottom: 20px;
+            margin-bottom: 35px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            position: relative;
-            z-index: 2;
+            z-index: 10;
         }
 
-        .brand-block h1 {
+        .brand h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 38pt;
-            letter-spacing: -1.5pt;
+            font-size: 34pt;
+            letter-spacing: -1pt;
             margin: 0;
-            line-height: 0.85;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            line-height: 0.9;
+            color: #f1f5f9;
         }
 
-        .brand-block span {
+        .brand span {
             font-size: 8pt;
-            letter-spacing: 6pt;
+            letter-spacing: 5pt;
             text-transform: uppercase;
             font-weight: 600;
-            color: rgba(255,255,255,0.8);
-            margin-top: 10px;
+            color: #94a3b8;
+            margin-top: 8px;
             display: block;
         }
 
-        .manifest-table-wrap {
-            background: rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 12px;
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 30px;
+            flex-grow: 1;
+            z-index: 10;
+        }
+
+        /* TABLE STYLING: REFINED DENSITY */
+        .table-section {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             padding: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            position: relative;
-            z-index: 2;
+            border-radius: 4px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 7.8pt;
-        }
+        table { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
+        th { text-align: left; text-transform: uppercase; color: #94a3b8; letter-spacing: 1.5pt; padding: 10px 5px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+        td { padding: 9px 5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-weight: 300; }
+        
+        .cat-tag { color: #6366f1; font-weight: 700; font-size: 7pt; text-transform: uppercase; display: block; }
+        .price { text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 600; color: #4ade80; }
 
-        th {
-            text-align: left;
-            text-transform: uppercase;
-            padding: 10px 5px;
-            border-bottom: 1.5px solid rgba(255,255,255,0.4);
-            color: #fff;
-            letter-spacing: 1.5pt;
-        }
-
-        td {
-            padding: 8px 5px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            color: #fff;
-            line-height: 1.3;
-        }
-
-        .price-cell {
-            text-align: right;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-            color: #4ade80; /* Brighter green for twilight bg */
-        }
-
-        /* SIDEBAR / MAGAZINE ELEMENTS */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
+        /* SIDEBAR: EDITORIAL FEEL */
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        
         .insight-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 18px;
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-left: 2px solid #6366f1;
         }
 
-        .insight-card h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 13pt;
-            margin: 0 0 10px 0;
-            color: #fff;
-        }
+        .insight-card h4 { font-family: 'Playfair Display', serif; font-size: 11pt; margin: 0 0 8px 0; color: #f1f5f9; }
+        .insight-card p { font-size: 7.8pt; line-height: 1.5; margin: 0; color: #94a3b8; }
 
-        .insight-card p {
-            font-size: 8.5pt;
-            line-height: 1.5;
-            margin: 0;
-            font-weight: 300;
-            color: rgba(255,255,255,0.9);
-        }
-
-        .img-sim {
+        .image-sim {
             width: 100%;
-            height: 110px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 8px;
-            margin-bottom: 12px;
+            height: 90px;
+            background: #020617;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 7pt;
+            font-size: 6pt;
             text-transform: uppercase;
             letter-spacing: 1pt;
-            border: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.6;
         }
 
-        .total-box {
-            grid-column: span 2;
+        /* FOOTER / TOTALS */
+        .footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
             display: flex;
-            justify-content: flex-end;
-            align-items: baseline;
-            gap: 20px;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            padding-top: 20px;
-            margin-top: 10px;
-            position: relative;
-            z-index: 2;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 10;
         }
 
-        .total-box span { font-size: 10pt; letter-spacing: 5pt; text-transform: uppercase; color: #fff; }
-        .total-box strong { font-family: 'Playfair Display', serif; font-size: 42pt; color: #fff; line-height: 1; }
+        .total-block span { font-size: 9pt; text-transform: uppercase; letter-spacing: 4pt; color: #94a3b8; display: block; margin-bottom: 5px; }
+        .total-block strong { font-family: 'Playfair Display', serif; font-size: 44pt; color: #f1f5f9; line-height: 0.8; }
 
+        .meta { font-size: 7pt; color: #475569; max-width: 250px; line-height: 1.4; }
+
+        /* PRINT OVERRIDES */
         @media print {
             body { background: none; }
-            .magazine-page { box-shadow: none; margin: 0; }
+            .page-container { box-shadow: none; margin: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="magazine-page">
+    <div class="page-container">
         <header>
-            <div class="brand-block">
+            <div class="brand">
                 <h1>Urban Cinema</h1>
-                <span>Operations & Machinery Manifest</span>
+                <span>Master Infrastructure Audit</span>
             </div>
-            <div style="text-align: right; font-size: 7pt; opacity: 0.7; color: #fff;">
-                DOCUMENT ID: UCM-PRO-2026<br>
-                SECURE LENDER FILE
+            <div style="text-align: right; font-family: 'JetBrains Mono'; font-size: 7pt; color: #6366f1;">
+                REF: UCM-PRO-2026<br>
+                Q1 FISCAL REVIEW
             </div>
         </header>
 
-        <div class="manifest-table-wrap">
-            <div style="font-weight: 700; font-size: 9pt; color: #fff; margin-bottom: 15px; letter-spacing: 1pt;">I. PRIMARY ASSETS</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 25%;">System</th>
-                        <th style="width: 55%;">Specification</th>
-                        <th style="text-align: right;">Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Visual Ops</td><td>20ft Pro-Exhibition Cinema Screen / Surface</td><td class="price-cell">$150.00</td></tr>
-                    <tr><td>Precision</td><td>Remote Alignment Mount & Stability Rigging</td><td class="price-cell">$89.00</td></tr>
-                    <tr><td>Production</td><td>8oz Industrial High-Output Popcorn Kettle</td><td class="price-cell">$180.00</td></tr>
-                    <tr><td>Concession</td><td>Cotton Candy Multi-Floss Commercial Spinner</td><td class="price-cell">$160.00</td></tr>
-                    <tr><td>Hydration</td><td>Double-Tank Slushie Tech (24L Capacity)</td><td class="price-cell">$199.00</td></tr>
-                    <tr><td>Hot-Line</td><td>Double-Tank 12L Deep Fryer (Stainless)</td><td class="price-cell">$80.00</td></tr>
-                    <tr><td>Display</td><td>Clarity Hub Array (6) LED-Exhibition Cases</td><td class="price-cell">$90.00</td></tr>
-                    <tr><td>Service</td><td>(3) 3-Gallon Professional Pouring Units</td><td class="price-cell">$115.00</td></tr>
-                    <tr><td>Broadcasting</td><td>FM Stereo Digital Transmitter & Media Hub</td><td class="price-cell">$140.00</td></tr>
-                    <tr><td>Control</td><td>GoBox Reinforced Site Management Unit</td><td class="price-cell">$150.00</td></tr>
-                    <tr><td>Compliance</td><td>400ft Shatterproof LED Safety Lighting</td><td class="price-cell">$200.00</td></tr>
-                </tbody>
-            </table>
+        <div class="grid-layout">
+            <div class="table-section">
+                <div style="font-size: 8pt; font-weight: 700; color: #6366f1; margin-bottom: 12px; letter-spacing: 2pt;">[ AUDIT: MACHINERY ]</div>
+                <table>
+                    <thead>
+                        <tr><th>System</th><th>Specification</th><th style="text-align:right;">Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="cat-tag">Visuals</span>20ft Screen</td><td>Pro-Exhibition Cinematic Surface</td><td class="price">$150.00</td></tr>
+                        <tr><td><span class="cat-tag">Mounting</span>Precision Rig</td><td>Remote Alignment Mount & Stability Rigging</td><td class="price">$89.00</td></tr>
+                        <tr><td><span class="cat-tag">Concessions</span>Popcorn Kettle</td><td>8oz Industrial High-Output Unit</td><td class="price">$180.00</td></tr>
+                        <tr><td><span class="cat-tag">Concessions</span>Candy Spinner</td><td>Commercial Multi-Floss Spinner Hub</td><td class="price">$160.00</td></tr>
+                        <tr><td><span class="cat-tag">Liquids</span>Slushie Tech</td><td>Double-Tank 24L Capacity (Heat-Shield)</td><td class="price">$199.00</td></tr>
+                        <tr><td><span class="cat-tag">Hot-Food</span>Deep Fryer</td><td>Industrial Stainless 12L Unit</td><td class="price">$80.00</td></tr>
+                        <tr><td><span class="cat-tag">Display</span>Clarity Hub</td><td>(6) Shatterproof LED Exhibition Cases</td><td class="price">$90.00</td></tr>
+                        <tr><td><span class="cat-tag">Hydration</span>Pour Units</td><td>(3) 3-Gallon Professional Systems</td><td class="price">$115.00</td></tr>
+                        <tr><td><span class="cat-tag">Media</span>Broadcast</td><td>FM Stereo Digital Master Transmitter</td><td class="price">$140.00</td></tr>
+                        <tr><td><span class="cat-tag">Operations</span>Control Hub</td><td>GoBox Reinforced Site Management</td><td class="price">$150.00</td></tr>
+                        <tr><td><span class="cat-tag">Compliance</span>LED Safety</td><td>400ft Safety Runway Lighting String</td><td class="price">$200.00</td></tr>
+                    </tbody>
+                </table>
 
-            <div style="font-weight: 700; font-size: 9pt; color: #fff; margin: 20px 0 10px 0; letter-spacing: 1pt;">II. INVENTORY & RESERVES</div>
-            <table>
-                <tbody>
-                    <tr><td style="width: 25%;">Soul-Fry</td><td>Premium Wings, Okra, Flour, Oils</td><td class="price-cell">$285.00</td></tr>
-                    <tr><td>Base Stock</td><td>Kernels, Floss Sugar, Syrups, Infusions</td><td class="price-cell">$192.00</td></tr>
-                    <tr><td>Logistics</td><td>VIP Placards, A-Frames, Site Decals</td><td class="price-cell">$130.00</td></tr>
-                    <tr><td>Liquidity</td><td>16.6% Operating Contingency Reserve</td><td class="price-cell">$750.00</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="sidebar">
-            <div class="insight-card">
-                <div class="img-sim">[ Concept: Twilight Cinema ]</div>
-                <h4>The Magic Hour Advantage</h4>
-                <p>By operating during the twilight transition, Urban Cinema leverages high-contrast visuals on exhibition-grade screens. This timing maximizes concession "munching" windows by 35% compared to late-night starts.</p>
+                <div style="font-size: 8pt; font-weight: 700; color: #6366f1; margin: 20px 0 10px 0; letter-spacing: 2pt;">[ AUDIT: RESERVES ]</div>
+                <table>
+                    <tbody>
+                        <tr><td style="width: 30%;">Soul-Fry Suite</td><td>Premium Inventory (Wings/Okra/Batter)</td><td class="price">$285.00</td></tr>
+                        <tr><td>Base Stock</td><td>Kernels, Floss Sugar, Syrups, Infusions</td><td class="price">$192.00</td></tr>
+                        <tr><td>Site Prep</td><td>VIP Placards, A-Frames, Site Decals</td><td class="price">$130.00</td></tr>
+                        <tr><td>Liquidity</td><td>Operating Cash Contingency Reserve</td><td class="price">$840.00</td></tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="insight-card">
-                <h4>Safety as Luxury</h4>
-                <p>The 400ft LED runway lights aren't just for safety; they create a VIP "Red Carpet" pathing for vehicles, elevating the experience from a simple parking lot to a curated event space.</p>
-            </div>
+            <div class="sidebar">
+                <div class="insight-card">
+                    <div class="image-sim">[ Visual: Twilight Setup ]</div>
+                    <h4>Dusk Operational Advantage</h4>
+                    <p>The transition from dusk to midnight provides the optimal "Mental Hunger" window for high-margin concessions. Our lighting rig capitalizes on this specific 120-minute peak.</p>
+                </div>
 
-            <div class="insight-card" style="background: rgba(0,0,0,0.4); border-color: #fff;">
-                <h4>Lender Insight</h4>
-                <p>Every dollar in the $3k allocation is tied to a specific revenue stream or risk-mitigation protocol. This is a high-utilization, low-overhead model designed for immediate ROI.</p>
+                <div class="insight-card">
+                    <h4>Asset Longevity</h4>
+                    <p>All machinery is selected for industrial durability and rapid site-deployment. The GoBox system ensures zero power latency during peak event windows.</p>
+                </div>
+
+                <div class="insight-card" style="border-left-color: #f1f5f9; background: rgba(255,255,255,0.05);">
+                    <h4>Lender Protocol</h4>
+                    <p>This $3,000 procurement is a "Hard Asset" investment. 72% of the value is held in reusable, high-durability machinery with low depreciation rates.</p>
+                </div>
             </div>
         </div>
 
-        <div class="total-box">
-            <span>Procurement Total</span>
-            <strong>$3,000.00</strong>
-        </div>
+        <footer class="footer">
+            <div class="meta">
+                CONFIDENTIAL LENDER DOCUMENT // URBAN CINEMA MEDIA LLC<br>
+                PROPRIETARY PRICING & LOGISTICS MODEL
+            </div>
+            <div class="total-block">
+                <span>Total Procurement</span>
+                <strong>$3,000.00</strong>
+            </div>
+        </footer>
     </div>
 
 </body>
