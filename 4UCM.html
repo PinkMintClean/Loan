@@ -2,37 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UCM Page 04 - Comprehensive Revenue & Concessions Architecture</title>
+    <title>UCM Page 04 - Exhaustive Revenue & Operational Manifest</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <style>
         @page { size: A4; margin: 0; }
         :root {
-            --midnight: #050a18;
+            --midnight: #02050e;
             --gold: #c5a400;
             --money: #2ecc71;
             --silver: #e0e0e0;
             --warn: #ff4757;
+            --table-border: rgba(197, 164, 0, 0.4);
         }
         body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.0; }
         .page {
             width: 210mm; height: 297mm; margin: 0 auto;
             background-color: var(--midnight);
-            border: 12px double var(--gold);
-            padding: 3mm 6mm; position: relative; box-sizing: border-box; overflow: hidden;
+            border: 14px double var(--gold);
+            padding: 4mm 6mm; position: relative; box-sizing: border-box;
             display: flex; flex-direction: column;
         }
         h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.8; }
-        .section-header { border-left: 6px solid var(--gold); padding-left: 8px; margin-bottom: 3px; background: linear-gradient(90deg, rgba(197,164,0,0.3) 0%, transparent 100%); padding-top: 2px; padding-bottom: 2px; }
-        .revenue-table { width: 100%; border-collapse: collapse; font-size: 0.52rem; margin-bottom: 4px; }
-        .revenue-table th { background: var(--gold); color: var(--midnight); padding: 3px; text-align: left; font-weight: 900; text-transform: uppercase; border: 1px solid #333; font-size: 0.48rem; }
-        .revenue-table td { border: 1px solid rgba(197, 164, 0, 0.3); padding: 3px; vertical-align: top; }
-        .stat-box { border: 2px solid var(--gold); background: rgba(255, 255, 255, 0.05); padding: 3px; text-align: center; }
-        .label-gold { color: var(--gold); font-weight: 900; font-size: 7px; text-transform: uppercase; letter-spacing: 1px; }
-        .price-bold { font-family: 'Playfair Display', serif; font-size: 15px; color: #fff; font-weight: 900; line-height: 1; }
-        .warning-tag { background: var(--warn); color: white; font-size: 5.5px; font-weight: 900; padding: 1px 4px; display: inline-block; margin-top: 2px; border-radius: 2px; }
-        .priority-badge { background: var(--money); color: #000; font-size: 5px; padding: 1px 4px; font-weight: 900; border-radius: 2px; text-transform: uppercase; }
-        .category-title { color: var(--gold); font-weight: 900; font-size: 7.5px; text-transform: uppercase; display: block; border-bottom: 1px solid rgba(197, 164, 0, 0.2); margin-bottom: 2px; }
+        .section-header { border-left: 8px solid var(--gold); padding-left: 10px; margin-bottom: 4px; background: linear-gradient(90deg, rgba(197,164,0,0.4) 0%, transparent 100%); padding-top: 4px; padding-bottom: 4px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 6px; table-layout: fixed; }
+        th { background: var(--gold); color: #000; padding: 3px; font-weight: 900; text-transform: uppercase; font-size: 7px; border: 1px solid #000; }
+        td { border: 1px solid var(--table-border); padding: 3px; font-size: 6.5px; vertical-align: middle; line-height: 1.1; }
+        
+        .stat-box { border: 2px solid var(--gold); background: rgba(255, 255, 255, 0.03); padding: 5px; text-align: center; }
+        .label-gold { color: var(--gold); font-weight: 900; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .price-bold { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; font-weight: 900; line-height: 1; }
+        
+        .priority-badge { background: var(--money); color: #000; font-size: 6px; padding: 1px 4px; font-weight: 900; border-radius: 2px; text-transform: uppercase; }
+        .in-budget { color: var(--money); font-weight: 800; }
+        .scale-option { color: #5dade2; font-weight: 800; }
+        .data-header { color: var(--gold); font-weight: 900; font-size: 7.5px; text-transform: uppercase; display: block; border-bottom: 1px solid var(--table-border); margin-bottom: 2px; }
+        .warning-text { color: var(--warn); font-size: 6px; font-weight: 900; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -40,146 +46,212 @@
         <!-- HEADER -->
         <div class="flex justify-between items-end border-b-4 border-gold pb-1 mb-2">
             <div>
-                <h1 class="text-4xl font-black tracking-tighter">REVENUE ARCHITECTURE</h1>
-                <p class="text-[9px] uppercase tracking-[3px] text-slate-400 font-bold">Urban Cinema Media LLC // Full Concessions & Transit Manifest</p>
+                <h1 class="text-5xl font-black tracking-tighter">REVENUE ARCHITECTURE</h1>
+                <p class="text-[11px] uppercase tracking-[5px] text-slate-400 font-bold">Urban Cinema Media LLC // Exhaustive Financial & Inventory Manifest</p>
             </div>
             <div class="text-right">
-                <p class="text-xs font-black text-gold italic">MASTER FINANCIALS</p>
-                <p class="text-xl font-black text-white">DOCUMENT 04</p>
+                <p class="text-sm font-black text-gold italic">LOGISTICS GRID v4.0</p>
+                <p class="text-3xl font-black text-white">DOCUMENT 04</p>
             </div>
         </div>
 
-        <!-- SECTION I: ACCESS & PARKING LOGISTICS -->
-        <div class="section-header"><h2 class="text-[11px] font-black text-gold uppercase italic">I. Tiered Access, Parking Priority & Penalties</h2></div>
-        <div class="grid grid-cols-4 gap-2 mb-2">
+        <!-- SECTION I: TIERED ACCESS & STIPULATIONS -->
+        <div class="section-header"><h2 class="text-[12px] font-black text-gold uppercase italic">I. Tiered Access Logistics & Compliance Penalties</h2></div>
+        <div class="grid grid-cols-4 gap-3 mb-3">
             <div class="stat-box">
-                <p class="label-gold">EARLY BIRD</p>
-                <p class="price-bold">$15.00</p>
-                <p class="text-[6px] text-slate-300 font-bold uppercase mt-1">Zone B Slot</p>
-                <span class="warning-tag">LATE PENALTY: Arrivals >15m forfeit Zone B; moved to Rear Zone C.</span>
+                <p class="label-gold">EARLY BIRD TICKET</p>
+                <p class="price-bold text-money">$15.00</p>
+                <p class="text-[7px] text-slate-300 font-black mt-1">ZONE B PARKING SLOT</p>
+                <p class="text-[6px] italic leading-tight text-slate-400 mt-1">Early arrival incentivized. 1 Unit Vehicle + Driver access.</p>
+                <p class="warning-text mt-2">STIPULATION: Arrival window is 60m pre-show. Lateness >15m results in forfeiture of Zone B and re-routing to Rear Zone C with no refund of premium differential.</p>
             </div>
             <div class="stat-box">
-                <p class="label-gold">GENERAL ADM.</p>
+                <p class="label-gold">GENERAL ADMISSION</p>
                 <p class="price-bold">$25.00</p>
-                <p class="text-[6px] text-slate-300 font-bold uppercase mt-1">Zone C Slot</p>
-                <p class="text-[5px] italic text-slate-400 mt-1">First-come field placement.</p>
+                <p class="text-[7px] text-slate-300 font-black mt-1">ZONE C PARKING SLOT</p>
+                <p class="text-[6px] italic leading-tight text-slate-400 mt-1">Standard Field Placement. First-come, first-served based on remaining field volume.</p>
+                <p class="text-gold font-black text-[6px] mt-2 uppercase">FIXED ACCESS RATE</p>
             </div>
             <div class="stat-box bg-gold/10">
-                <p class="label-gold">VIP PREMIER</p>
+                <p class="label-gold">VIP PREMIER ACCESS</p>
                 <p class="price-bold text-gold">$35.00</p>
-                <p class="text-[6px] text-gold font-black uppercase mt-1">Zone A: Prime</p>
-                <p class="text-[5px] italic text-slate-200 mt-1">Center alignment + Rapid egress lane.</p>
+                <p class="text-[7px] text-gold font-black mt-1">ZONE A: PRIME GEOMETRY</p>
+                <p class="text-[6px] italic leading-tight text-slate-200 mt-1">Center-screen alignment. Guaranteed egress lane proximity for immediate site exit post-credits.</p>
+                <p class="text-money font-black text-[6px] mt-2 uppercase">INCLUDES PRIORITY CONCESSION RUNNER</p>
             </div>
             <div class="stat-box bg-gold/30 border-white border-2">
-                <p class="label-gold text-white">ELITE FAMILY</p>
+                <p class="label-gold text-white">ELITE FAMILY BUNDLE</p>
                 <p class="price-bold">$85.00</p>
-                <p class="text-[6px] text-white font-black uppercase mt-1">Front Row Center</p>
-                <p class="text-[5px] italic text-white mt-1">4 Entry Heads + Bulk Meal Bundle.</p>
+                <p class="text-[7px] text-white font-black mt-1">FRONT ROW PRIORITY</p>
+                <p class="text-[6px] italic leading-tight text-white mt-1">Max 4 Heads. Best Sightlines. Includes "Bulk Meal Bundle" (Detailed in Section V).</p>
+                <p class="text-white font-black text-[6px] mt-2 uppercase">PLATINUM LEVEL SERVICE</p>
             </div>
         </div>
 
-        <!-- SECTION II: THE COMMUNITY VALUE MENU (PRIORITIZED TOP) -->
-        <div class="section-header"><h2 class="text-[11px] font-black text-gold uppercase italic">II. Priority Value Menu (Day 1 Budgeted Entry-Level Items)</h2></div>
-        <div class="grid grid-cols-5 gap-1 mb-2">
-            <div class="stat-box border-money/40 p-1"><span class="text-[5.5px] block font-bold">POPCORN CONE</span><span class="text-money font-black text-lg">$1.00</span></div>
-            <div class="stat-box border-money/40 p-1"><span class="text-[5.5px] block font-bold">MINI SLUSHIE</span><span class="text-money font-black text-lg">$2.00</span></div>
-            <div class="stat-box border-money/40 p-1"><span class="text-[5.5px] block font-bold">FRUIT PUNCH</span><span class="text-money font-black text-lg">$1.00</span></div>
-            <div class="stat-box border-money/40 p-1"><span class="text-[5.5px] block font-bold">SINGLE WING</span><span class="text-money font-black text-lg">$1.50</span></div>
-            <div class="stat-box border-money/40 p-1"><span class="text-[5.5px] block font-bold">SINGLE ROLL</span><span class="text-money font-black text-lg">$0.50</span></div>
-        </div>
-
-        <!-- SECTION III: THE FULL CULINARY MANIFEST (DAY 1 BUDGETED) -->
-        <div class="section-header"><h2 class="text-[11px] font-black text-gold uppercase italic">III. The Full Culinary Engine (Day 1 Operational Inventory)</h2></div>
-        <table class="revenue-table">
+        <!-- SECTION II: THE EXHAUSTIVE CULINARY MANIFEST (DAY 1 INVENTORY) -->
+        <div class="section-header"><h2 class="text-[12px] font-black text-gold uppercase italic">II. Operational Inventory: Concessions Breakdown (Day 1 Budgeted)</h2></div>
+        <table>
             <thead>
                 <tr>
-                    <th width="20%">Category</th>
-                    <th width="50%">Full Item Variety & Flavor Strategy</th>
-                    <th width="15%">Pricing S/M/L</th>
-                    <th width="15%">Premium Tier</th>
+                    <th width="15%">Category Hub</th>
+                    <th width="35%">Individual Variety & Flavor Profiles</th>
+                    <th width="15%">Production Strategy</th>
+                    <th width="12%">Unit Cost / Pkg</th>
+                    <th width="15%">S / M / L Pricing</th>
+                    <th width="8%">ROI%</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="bg-white/5">
-                    <td><span class="category-title">Popcorn Hub</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Flavor Profiles:</b> Movie Theater Butter, Sea Salt, Gourmet Caramel, SPICY HEAT (Cayenne/Hab), Zesty RANCH, and Sugar-Coated Random Colors. High-end UCM logo clear bags.</td>
-                    <td>$3 / $7 / $10</td>
-                    <td><b>$12.00</b> (Jumbo)</td>
-                </tr>
                 <tr>
-                    <td><span class="category-title">Carnival Fried Foods</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Finger Foods:</b> MOZZARELLA STICKS (w/ Marinara), ONION RINGS (Signature Beer-Battered), Fried Okra, Onion Wings, and Corn-on-Hub. No pressure cooking—high-heat flash fried.</td>
-                    <td>$5 / $9 / $13</td>
-                    <td><b>$16.00</b> (Platter)</td>
+                    <td><span class="data-header">POPCORN MACHINE</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Profiles:</b> Movie Theater Butter, Sea Salt, Gourmet Caramel, Spicy Heat (Cayenne), Zesty Ranch, Sugar-Coated Colors.</td>
+                    <td><b>Pre-Make Strategy:</b> 200-300 High-Volume Bags pre-filled for immediate sale.</td>
+                    <td>$0.45 / $0.15</td>
+                    <td>$3 / $7 / $10<br><b class="text-white">Jumbo: $12</b></td>
+                    <td class="in-budget">1400%</td>
                 </tr>
                 <tr class="bg-white/5">
-                    <td><span class="category-title">The Wing Platoon</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Fire-Grilled/Fried:</b> Southern Dry Rub, Sweet-Heat Glaze, Lemon Pepper, & Garlic Parm. Drumstick focus. Rapid service high-velocity prep.</td>
-                    <td>$12 / $22 / $40</td>
-                    <td><b>$48.00</b> (Party)</td>
+                    <td><span class="data-header">CARNIVAL FRIED</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Finger Foods:</b> Mozzarella Sticks (w/ Marinara), Onion Rings (Beer-Batter), Fried Okra, Onion Wings, Corn-on-Hub.</td>
+                    <td><b>Raw Prep:</b> Flash-fried to order. 0 Pressure cooking. High-heat searing.</td>
+                    <td>$1.80 / $0.25</td>
+                    <td>$5 / $9 / $13<br><b class="text-white">Platter: $16</b></td>
+                    <td class="in-budget">680%</td>
                 </tr>
                 <tr>
-                    <td><span class="category-title">Hot Station & Dogs</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Hickory Seared:</b> All-Beef, Turkey, and Veggie franks. Flash-seared on the grill for maximum aroma marketing. Toasted rolls.</td>
-                    <td>$4 / $6 / $8</td>
-                    <td><b>$10.00</b> (Bundle)</td>
+                    <td><span class="data-header">THE WING PLATOON</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Flavors:</b> Southern Dry Rub, Sweet-Heat Glaze, Lemon Pepper, Garlic Parm. Focus on high-velocity drumsticks.</td>
+                    <td><b>Hybrid Prep:</b> Marinated bulk raw. Fire-grilled/Deep fried flash-finish.</td>
+                    <td>$3.20 / $0.40</td>
+                    <td>$12 / $22 / $40<br><b class="text-white">Party: $48</b></td>
+                    <td class="in-budget">410%</td>
                 </tr>
                 <tr class="bg-white/5">
-                    <td><span class="category-title">Sweet Station</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Sugar Assets:</b> COTTON CANDY TUBS (Multi-Flavor/Colors), Belgian Waffle Pops w/ Fruit Infusions (Berry/Peach), Artisan Cupcakes, and Tiered Cake Slices.</td>
-                    <td>$3 / $5 / $8</td>
-                    <td><b>$15.00</b> (Box)</td>
+                    <td><span class="data-header">HOT STATION DOGS</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Hickory Seared:</b> All-Beef Jumbo, Lean Turkey, Veggie Options. Seared for aroma-based marketing. Toasted buns.</td>
+                    <td><b>Grill Strategy:</b> Live grilling for visual engagement. Pre-portioned rolls.</td>
+                    <td>$0.95 / $0.12</td>
+                    <td>$4 / $6 / $8<br><b class="text-white">Duo: $10</b></td>
+                    <td class="in-budget">700%</td>
                 </tr>
                 <tr>
-                    <td><span class="category-title">Beverage Hub</span><span class="priority-badge">Budgeted</span></td>
-                    <td><b>Hydration:</b> SLUSHIES (Blue Ras, Cherry, Grape), GOURMET LEMONADES (Strawberry, Peach, Classic), Fruit Punches, and Bottled Refreshments.</td>
-                    <td>$2 / $4 / $6</td>
-                    <td><b>$8.00</b> (Souvenir)</td>
+                    <td><span class="data-header">COTTON CANDY</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Sugar Assets:</b> Blue Raspberry, Pink Vanilla, Grape, Sour Apple. Large-format Tubs and Stick variations.</td>
+                    <td><b>Pre-Make Strategy:</b> 100+ Tubs pre-spun and sealed to maximize throughput.</td>
+                    <td>$0.25 / $0.35</td>
+                    <td>$5 / $8 / $12<br><b class="text-white">Elite: $15</b></td>
+                    <td class="in-budget">1200%</td>
+                </tr>
+                <tr class="bg-white/5">
+                    <td><span class="data-header">BEVERAGE HUB</span><span class="in-budget">BUDGETED</span></td>
+                    <td><b>Liquids:</b> Slushies (Ras/Cherry), Gourmet Lemonade (Strawberry/Peach), Fruit Punch, Bottled Water.</td>
+                    <td><b>Cold Storage:</b> High-capacity slushie machines + Pre-mixed fruit infusions.</td>
+                    <td>$0.55 / $0.40</td>
+                    <td>$2 / $4 / $6<br><b class="text-white">Souvenir: $8</b></td>
+                    <td class="in-budget">850%</td>
                 </tr>
             </tbody>
         </table>
 
-        <!-- SECTION IV: SCALABILITY & HERITAGE -->
-        <div class="section-header"><h2 class="text-[11px] font-black text-gold uppercase italic">IV. Heritage Fusion & Scalability Strategy (Phase II/III)</h2></div>
-        <div class="grid grid-cols-2 gap-3 mb-2">
-            <div class="border border-gold/40 p-2 bg-white/5 text-[6.5px] leading-tight">
-                <p class="font-black text-gold border-b border-gold/20 mb-1 uppercase">K-Town x Mexican Fusion</p>
-                <b>Grandmother's Japanese Curry:</b> "Green Box" legacy. Potatoes, Carrots, Celery, Onion, Beef/Chicken over sticky rice. Asian "Chicken Noodle Soup" comfort factor.<br>
-                <b>Pressure-Cooked Meats:</b> Only for Quesadilla & Birria Taco fillings for tenderness.<br>
-                <b>Hawaiian Sliders:</b> 45-loaf bulk prep for rapid car-side delivery.
+        <!-- SECTION III: SCALABILITY & FUTURE MENU (NOT IN BUDGET) -->
+        <div class="section-header"><h2 class="text-[12px] font-black text-gold uppercase italic">III. Future Scaling: Strategic Growth & Non-Budgeted Inventory</h2></div>
+        <table>
+            <thead>
+                <tr>
+                    <th width="20%">Expansion Category</th>
+                    <th width="40%">Item Description & Strategic Intent</th>
+                    <th width="20%">Production Method</th>
+                    <th width="20%">Target Price Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="data-header">K-TOWN x MEXICAN</span><span class="scale-option">SCALABILITY</span></td>
+                    <td><b>Fusion Hub:</b> Quesadillas & Birria Tacos using pressure-cooked tenderized meats. K-Spice infused protein.</td>
+                    <td>Pressure Cooked Pre-Service</td>
+                    <td>$14.00 - $18.00</td>
+                </tr>
+                <tr class="bg-white/5">
+                    <td><span class="data-header">HERITAGE CURRY</span><span class="scale-option">SCALABILITY</span></td>
+                    <td><b>Grandmother's Japanese Curry:</b> The "Green Box" legacy. Potatoes, Carrots, Beef over sticky rice. High comfort value.</td>
+                    <td>Bulk Slow-Simmer</td>
+                    <td>$12.00 / $16.00</td>
+                </tr>
+                <tr>
+                    <td><span class="data-header">WAFFLE HUB</span><span class="scale-option">SCALABILITY</span></td>
+                    <td><b>100 Stick Variations:</b> Pre-made waffle stick base w/ frozen fruit infusions (Peach, Strawberry, Blueberry).</td>
+                    <td>Bulk Pre-Make / Flash Warm</td>
+                    <td>$5.00 / $8.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SECTION IV: THE MEAL DEAL ENGINE (GRANULAR COMBOS) -->
+        <div class="section-header"><h2 class="text-[12px] font-black text-gold uppercase italic">IV. Meal Deal Architecture: Strategic Revenue Maximization</h2></div>
+        <div class="grid grid-cols-3 gap-2 mb-3">
+            <div class="border-2 border-gold p-2">
+                <p class="font-black text-gold text-[8px] uppercase">Small "Matinee" Meal</p>
+                <ul class="text-[6.5px] space-y-1 mt-1">
+                    <li>1x Small Wing (3pc)</li>
+                    <li>1x Small Corn-on-Hub</li>
+                    <li>1x Small Popcorn Cone</li>
+                    <li>1x Small Drink (12oz)</li>
+                    <li class="text-money font-bold">RETAIL: $12.00 (Savings $3.00)</li>
+                </ul>
             </div>
-            <div class="border border-gold/40 p-2 bg-white/5 text-[6.5px] leading-tight">
-                <p class="font-black text-gold border-b border-gold/20 mb-1 uppercase">Community Marketplace & Social Revenue</p>
-                <b>Screen Shout-Outs:</b> Birthdays, Proposals, Tributes, Ads ($15-$75).<br>
-                <b>Inflatable Zone:</b> Bounce House Wristband Model ($10/Child, UCM takes 40%).<br>
-                <b>Vendor Agreements:</b> DIY Market Booths ($50) & Food Truck Slots ($125).
+            <div class="border-2 border-gold p-2 bg-gold/5">
+                <p class="font-black text-gold text-[8px] uppercase">Medium "Double-Feature"</p>
+                <ul class="text-[6.5px] space-y-1 mt-1">
+                    <li>1x Med Wing (6pc)</li>
+                    <li>1x Mozzarella Stick Order</li>
+                    <li>1x Med Popcorn Bag</li>
+                    <li>1x Med Slushie</li>
+                    <li class="text-money font-bold">RETAIL: $25.00 (Savings $6.00)</li>
+                </ul>
+            </div>
+            <div class="border-2 border-gold p-2 bg-gold/20">
+                <p class="font-black text-gold text-[8px] uppercase">"Elite Family" Bulk Meal</p>
+                <ul class="text-[6.5px] space-y-1 mt-1">
+                    <li>1x Party Wing Platoon (20pc)</li>
+                    <li>4x Corn-on-Hub / 4x Onion Wings</li>
+                    <li>2x Jumbo Popcorn (Any Flavor)</li>
+                    <li>4x Souvenir Drinks (Refillable)</li>
+                    <li class="text-money font-bold">RETAIL: $75.00 (Value Built-in)</li>
+                </ul>
             </div>
         </div>
 
-        <!-- SECTION V: 10-YEAR TRANSIT EMPIRE -->
-        <div class="section-header"><h2 class="text-[11px] font-black text-gold uppercase italic">V. 10-Year Infrastructure: UCM Autonomous Transit Network</h2></div>
-        <div class="grid grid-cols-2 gap-2 mb-2">
-            <div class="stat-box border-money/50 bg-money/5 text-left p-1">
-                <p class="text-money font-black text-[8px] uppercase">The Golden Triangle Loop (Year 3-5)</p>
-                <p class="text-[6px] mt-1 text-slate-300">Private shuttle system. Scheduled luxury transit for local seniors, students, and families from Columbus to the UCM Arena site.</p>
+        <!-- SECTION V: MARKETPLACE & TRANSIT EMPIRE -->
+        <div class="section-header"><h2 class="text-[12px] font-black text-gold uppercase italic">V. Secondary Revenue & 10-Year Infrastructure</h2></div>
+        <div class="grid grid-cols-2 gap-4 mb-3">
+            <div>
+                <table class="revenue-table h-full">
+                    <thead><tr><th colspan="2">COMMUNITY MARKETPLACE & SOCIAL REVENUE</th></tr></thead>
+                    <tbody>
+                        <tr><td class="font-bold">Screen Shout-Outs</td><td>Birthdays, Proposals, Memorials ($15-$75 per spot)</td></tr>
+                        <tr><td class="font-bold">Inflatable Zone</td><td>Wristband Model: $10/Day (40% Split to UCM Net)</td></tr>
+                        <tr><td class="font-bold">Marketplace Booths</td><td>DIY/Artisan Stall Fee ($50.00 Flat/Night)</td></tr>
+                        <tr><td class="font-bold">Vendor Table Rent</td><td>UCM Owned Table Rental Fee ($15.00 per unit)</td></tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="stat-box border-money/50 bg-money/5 text-left p-1">
-                <p class="text-money font-black text-[8px] uppercase">Inter-City Double-Decker Elite (Year 10)</p>
-                <p class="text-[6px] mt-1 text-slate-300"><b>Route: Jackson to Columbus.</b> Two-story luxury motorcoaches. 2.5-hour "Cinema-in-Transit" experience with on-board catering.</p>
+            <div class="stat-box border-money/50 bg-money/5 text-left p-2 flex flex-col justify-center">
+                <p class="text-money font-black text-[10px] uppercase border-b border-money/30 mb-1">Inter-City Infrastructure (Jackson to Columbus)</p>
+                <p class="text-[7.5px] leading-tight text-slate-300"><b>10-Year Goal:</b> Acquisition of Luxury Double-Decker motorcoaches for a 2.5-hour "Cinema-in-Transit" experience. Private autonomous transit line disrupting regional logistics. High-comfort, high-yield private transportation line for the Golden Triangle.</p>
             </div>
         </div>
 
-        <!-- TOTAL FOOTER -->
-        <div class="mt-auto bg-gradient-to-r from-midnight to-gold p-3 flex justify-between items-center border-t-4 border-gold">
+        <!-- FOOTER: THE BOTTOM LINE -->
+        <div class="mt-auto bg-gradient-to-r from-midnight to-gold p-4 flex justify-between items-center border-t-4 border-gold">
             <div class="flex-1">
-                <p class="text-[10px] font-black uppercase text-white">Event Capacity Gross Projection</p>
-                <p class="text-3xl font-black text-white leading-none">$8,450.00 - $14,200.00 <span class="text-xs">/EVENT</span></p>
-                <p class="text-[6px] text-midnight font-black mt-1 uppercase">100 Car Capacity @ $85 Elite Avg Spend + Secondary Revenue Streams</p>
+                <p class="text-[12px] font-black uppercase text-white">Event Capacity Gross Projection (Per 100 Car Logic)</p>
+                <p class="text-5xl font-black text-white leading-none">$14,200.00 <span class="text-lg font-light">EST. MAX YIELD</span></p>
+                <p class="text-[8px] text-midnight font-black mt-1 uppercase">LOGISTICS: 100 CARS @ $85 ELITE AVG + 300 PRE-MADE BAGS + VENDOR FEES + SOCIAL SCREEN ASSETS</p>
             </div>
-            <div class="text-right pl-3 border-l-2 border-midnight">
-                <p class="text-[10px] font-black uppercase text-midnight text-right">Infrastructure Target</p>
-                <p class="text-2xl font-black text-midnight leading-none">$25,000,000.00+</p>
-                <p class="text-[7.5px] font-black text-midnight uppercase">UCM Transit & Entertainment Empire</p>
+            <div class="text-right pl-5 border-l-2 border-midnight">
+                <p class="text-[12px] font-black uppercase text-midnight">Total Valuation Target</p>
+                <p class="text-4xl font-black text-midnight leading-none">$25,000,000.00+</p>
+                <p class="text-[9px] font-black uppercase text-midnight">UCM PRIVATE TRANSIT & ENTERTAINMENT EMPIRE</p>
             </div>
         </div>
     </div>
