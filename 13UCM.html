@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Lender Portfolio - Page 13 (Marketing Plan)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.1; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 10mm 12mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; }
+        .divider { height: 2px; background: var(--gold); margin: 15px 0; opacity: 0.5; }
+        
+        .box { border: 1px solid var(--gold); background: rgba(255, 255, 255, 0.03); padding: 15px; margin-bottom: 15px; }
+        .marketing-item { border-bottom: 1px solid rgba(197, 164, 0, 0.3); padding: 12px 0; }
+        .roi-badge { background: var(--gold); color: black; padding: 2px 10px; font-weight: 900; font-size: 10px; border-radius: 2px; }
+        
+        .footer-tab { position: absolute; bottom: 0; right: 0; background: var(--gold); color: black; padding: 5px 20px; font-weight: 900; font-size: 14px; }
+        .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 120px; color: rgba(197, 164, 0, 0.03); font-weight: 900; pointer-events: none; white-space: nowrap; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="watermark">MARKETING</div>
+        
+        <!-- HEADER -->
+        <div class="flex justify-between items-end border-b-4 border-gold pb-2 mb-4">
+            <div>
+                <h1 class="text-4xl font-black tracking-tighter text-gold uppercase">Marketing Plan</h1>
+                <p class="text-[12px] uppercase tracking-[4px] text-white font-black italic">Urban Cinema Media LLC // Strategic Outreach</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-white">13</p>
+            </div>
+        </div>
+
+        <!-- STRATEGIC SUMMARY -->
+        <div class="box">
+            <h2 class="text-gold font-black text-[14px] uppercase italic mb-2">Omni-Channel Saturation Logic</h2>
+            <p class="text-[11px] leading-relaxed text-slate-300">
+                UCM employs a high-velocity marketing strategy designed to convert the local "Golden Triangle" population through constant visibility. By layering digital precision with physical "boots-on-the-ground" presence, we ensure that every potential customer is touched by the UCM brand at least 7 times before the event date.
+            </p>
+        </div>
+
+        <!-- CHANNEL BREAKDOWN -->
+        <div class="flex-grow">
+            <div class="marketing-item flex justify-between items-start">
+                <div class="w-2/3">
+                    <h3 class="text-white font-black text-[13px] uppercase">Social Media Dominance</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Geo-fenced Instagram and Facebook campaigns targeting parents, university students, and local food enthusiasts within a 30-mile radius.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-gold uppercase">Budget: $600</p>
+                    <span class="roi-badge">300% ROI</span>
+                </div>
+            </div>
+
+            <div class="marketing-item flex justify-between items-start">
+                <div class="w-2/3">
+                    <h3 class="text-white font-black text-[13px] uppercase">Radio & Local Print</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Strategic 15-second spots on local morning shows and high-impact quarter-page ads in regional lifestyle magazines.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-gold uppercase">Budget: $400</p>
+                    <span class="roi-badge">150% ROI</span>
+                </div>
+            </div>
+
+            <div class="marketing-item flex justify-between items-start">
+                <div class="w-2/3">
+                    <h3 class="text-white font-black text-[13px] uppercase">University Partnerships</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Direct integration with MSU and local community colleges for student-discount "Date Night" promotions and campus-wide flyer drops.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-gold uppercase">Budget: $300</p>
+                    <span class="roi-badge">200% ROI</span>
+                </div>
+            </div>
+
+            <div class="marketing-item flex justify-between items-start">
+                <div class="w-2/3">
+                    <h3 class="text-white font-black text-[13px] uppercase">Sponsorship & B2B Activation</h3>
+                    <p class="text-[10px] text-slate-400 mt-1">Partnering with local auto dealerships and furniture stores for on-screen advertising and ticket-with-purchase giveaways.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-gold uppercase">Budget: $500</p>
+                    <span class="roi-badge">250% ROI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOTAL BUDGET SUMMARY -->
+        <div class="mt-6 bg-gold p-4 text-black flex justify-between items-center">
+            <div>
+                <p class="text-[10px] font-black uppercase tracking-tighter">Annual Marketing Allocation</p>
+                <p class="text-3xl font-black italic">$1,800.00</p>
+            </div>
+            <div class="text-right border-l-2 border-black pl-4">
+                <p class="text-[10px] font-black uppercase tracking-tighter">Conversion Goal</p>
+                <p class="text-3xl font-black uppercase">AGGRESSIVE</p>
+            </div>
+        </div>
+
+        <div class="footer-tab">PAGE 13</div>
+    </div>
+</body>
+</html>
