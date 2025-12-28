@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Page 09 - Liquidity & Accelerated Repayment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+            --alert: #e74c3c;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.2; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 10mm 12mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; }
+        
+        .matrix-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+        .tier-card { border: 2px solid var(--gold); background: rgba(255, 255, 255, 0.03); display: flex; flex-direction: column; }
+        .tier-header { padding: 10px; font-weight: 900; text-align: center; text-transform: uppercase; font-size: 11px; }
+        .tier-content { padding: 12px; flex-grow: 1; }
+        
+        .progress-track { background: #222; height: 10px; border-radius: 5px; margin: 8px 0; overflow: hidden; border: 1px solid #444; }
+        .progress-fill { background: var(--gold); height: 100%; }
+        
+        .summary-banner { border: 2px solid #fff; padding: 15px; background: rgba(255,255,255,0.05); margin-top: 20px; }
+        .stat-badge { border: 1px solid var(--gold); padding: 5px; text-align: center; background: rgba(197, 164, 0, 0.1); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <div class="flex justify-between items-end border-b-8 border-gold pb-4 mb-6">
+            <div>
+                <h1 class="text-5xl font-black tracking-tighter text-gold">LIQUIDITY MATRIX</h1>
+                <p class="text-[14px] uppercase tracking-[4px] text-white font-black italic">Urban Cinema Media LLC // Sensitivity Analysis</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-white">DOC 09</p>
+            </div>
+        </div>
+
+        <p class="text-[12px] text-slate-300 italic mb-4">UCM provides a transparent, tiered repayment schedule. By modeling three distinct attendance scenarios, we demonstrate the inherent resilience of our <b>Asset-Light</b> business model.</p>
+
+        <!-- THE MATRIX -->
+        <div class="matrix-container">
+            <!-- TIER 1: THE SPRINT -->
+            <div class="tier-card">
+                <div class="tier-header bg-gold text-black">Tier 1: High Velocity</div>
+                <div class="tier-content">
+                    <p class="text-[18px] font-black text-white mb-1">60 DAYS</p>
+                    <p class="text-[9px] text-gold font-bold uppercase mb-3">100% Attendance</p>
+                    <p class="text-[9px] leading-tight text-slate-300 mb-4">Assumes "Sell-Out" Pilot Phase. 90% of Net Profits diverted to Principal Liquidation.</p>
+                    <div class="text-[8px] font-black">RECOVERY PROGRESS</div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                    <p class="text-[8px] italic text-slate-500 mt-2">Target: 8 Events</p>
+                </div>
+            </div>
+
+            <!-- TIER 2: THE TARGET -->
+            <div class="tier-card" style="border-color: #fff;">
+                <div class="tier-header bg-white text-black">Tier 2: Strategic Target</div>
+                <div class="tier-content">
+                    <p class="text-[18px] font-black text-white mb-1">90 DAYS</p>
+                    <p class="text-[9px] text-white font-bold uppercase mb-3">75% Attendance</p>
+                    <p class="text-[9px] leading-tight text-slate-300 mb-4">Accounts for standard market penetration and minor weather delays. Q1 Debt Clearance.</p>
+                    <div class="text-[8px] font-black">RECOVERY PROGRESS</div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 75%;"></div></div>
+                    <p class="text-[8px] italic text-slate-500 mt-2">Target: 12 Events</p>
+                </div>
+            </div>
+
+            <!-- TIER 3: THE CONSERVATIVE -->
+            <div class="tier-card" style="border-color: #888;">
+                <div class="tier-header bg-slate-700 text-white">Tier 3: Safety Buffer</div>
+                <div class="tier-content">
+                    <p class="text-[18px] font-black text-white mb-1">120 DAYS</p>
+                    <p class="text-[9px] text-slate-400 font-bold uppercase mb-3">40% Attendance</p>
+                    <p class="text-[9px] leading-tight text-slate-300 mb-4">Stress-test scenario. Even at low launch volume, debt is settled in full within 4 months.</p>
+                    <div class="text-[8px] font-black">RECOVERY PROGRESS</div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 40%;"></div></div>
+                    <p class="text-[8px] italic text-slate-500 mt-2">Target: 16 Events</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RISK MITIGATION SECTION -->
+        <div class="summary-banner">
+            <h3 class="text-gold font-black text-[16px] uppercase border-b border-gold mb-3">The "Zero-Default" Commitment</h3>
+            <div class="grid grid-cols-2 gap-6">
+                <p class="text-[10.5px] text-slate-100 leading-relaxed">
+                    UCM’s financial strength lies in our <span class="text-gold font-bold">Variable Cost Structure</span>. Because we pay for film licensing and land-share as a percentage of actual sales, our overhead shrinks if attendance drops. This creates a natural "hedge" that protects the loan principal from market volatility.
+                </p>
+                <p class="text-[10.5px] text-slate-100 leading-relaxed">
+                    In all three scenarios, the loan is 100% collateralized by physical cinematic assets. This matrix serves as a pre-approved roadmap: Should Tier 1 targets be missed, Tier 2 or 3 protocols activate automatically without additional paperwork or restructuring required.
+                </p>
+            </div>
+        </div>
+
+        <!-- BOTTOM STATS -->
+        <div class="mt-auto grid grid-cols-4 gap-2 mb-4">
+            <div class="stat-badge"><p class="text-[8px] text-gold">BREAK-EVEN</p><p class="text-[14px] font-black">24 CARS</p></div>
+            <div class="stat-badge"><p class="text-[8px] text-gold">LOAN LTV</p><p class="text-[14px] font-black">70%</p></div>
+            <div class="stat-badge"><p class="text-[8px] text-gold">ASSET CLASS</p><p class="text-[14px] font-black">PRO-GRADE</p></div>
+            <div class="stat-badge"><p class="text-[8px] text-gold">RISK RATING</p><p class="text-[14px] font-black text-white">LOW</p></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="bg-gold p-4 flex justify-between items-center text-black">
+            <div>
+                <p class="text-[12px] font-black uppercase">Capital Assurance</p>
+                <p class="text-3xl font-black leading-none italic">Total Liquidation in Q1/Q2.</p>
+            </div>
+            <div class="text-right border-l-2 border-black pl-4">
+                <p class="text-[12px] font-black uppercase">Status</p>
+                <p class="text-3xl font-black leading-none uppercase">STRESS TESTED</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
