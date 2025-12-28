@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Page 11 - Grassroots Saturation & Secret Portals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+            --portal-blue: #00d2ff;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.1; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 8mm 10mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; }
+        
+        .portal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
+        .portal-card { border: 2px solid var(--gold); background: rgba(255, 255, 255, 0.03); padding: 15px; position: relative; overflow: hidden; }
+        .portal-tag { position: absolute; top: 0; right: 0; background: var(--gold); color: #000; font-size: 8px; font-weight: 900; padding: 2px 8px; text-transform: uppercase; }
+        
+        .qr-visual { width: 70px; height: 70px; border: 2px solid #fff; margin-bottom: 10px; background: white; display: flex; align-items: center; justify-content: center; }
+        .qr-pattern { width: 50px; height: 50px; background-image: radial-gradient(#000 20%, transparent 20%), radial-gradient(#000 20%, transparent 20%); background-position: 0 0, 5px 5px; background-size: 10px 10px; }
+
+        .logic-box { border-top: 4px solid var(--gold); background: rgba(197, 164, 0, 0.05); padding: 15px; margin-top: 20px; }
+        .highlight { color: var(--gold); font-weight: 900; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <div class="flex justify-between items-end border-b-4 border-gold pb-2 mb-4">
+            <div>
+                <h1 class="text-4xl font-black tracking-tighter text-gold">GRASSROOTS PORTALS</h1>
+                <p class="text-[12px] uppercase tracking-[4px] text-white font-black italic">Urban Cinema Media LLC // Exclusive QR Ecosystem</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-white">DOC 11</p>
+            </div>
+        </div>
+
+        <p class="text-[11px] text-slate-300 italic mb-4">
+            UCM utilizes a <span class="highlight">Closed-Loop QR Strategy</span>. Physical assets (flyers/cards) are not just advertisements—they are digital keys. Scanning a community-placed QR code opens a <b>Private Ticketing Portal</b> offering exclusive inventory not available on the public website.
+        </p>
+
+        <!-- PORTAL EXAMPLES -->
+        <div class="portal-grid">
+            <div class="portal-card">
+                <div class="portal-tag">Retail Exclusive</div>
+                <div class="qr-visual"><div class="qr-pattern"></div></div>
+                <p class="text-gold font-black text-[13px] uppercase">The "Golden Ticket" Portal</p>
+                <p class="text-[9px] mt-2 leading-tight">Distributed at Hair Salons & Boutiques. Unlocks <b>$10 Parking</b> and 1 Free Large Popcorn with any General Admission purchase.</p>
+            </div>
+
+            <div class="portal-card" style="border-color: #fff;">
+                <div class="portal-tag" style="background:#fff">Service Exclusive</div>
+                <div class="qr-visual"><div class="qr-pattern"></div></div>
+                <p class="text-white font-black text-[13px] uppercase">The "Fuel the Family" Portal</p>
+                <p class="text-[9px] mt-2 leading-tight">Placed at Gas Stations & Local Grocers. Unlocks the <b>Hidden Family Meal Menu</b> at a 20% discount when pre-ordered with tickets.</p>
+            </div>
+
+            <div class="portal-card" style="border-color: var(--portal-blue);">
+                <div class="portal-tag" style="background:var(--portal-blue)">VIP Exclusive</div>
+                <div class="qr-visual"><div class="qr-pattern"></div></div>
+                <p class="text-[13px] font-black uppercase" style="color:var(--portal-blue)">The "Pasture VIP" Portal</p>
+                <p class="text-[9px] mt-2 leading-tight">Strategic placements in high-end Furniture & Auto shops. Direct access to <b>Reserved Front-Row Parking</b> and Concierge Concession service.</p>
+            </div>
+
+            <div class="portal-card">
+                <div class="portal-tag">Community Exclusive</div>
+                <div class="qr-visual"><div class="qr-pattern"></div></div>
+                <p class="text-gold font-black text-[13px] uppercase">The "Faith & Family" Portal</p>
+                <p class="text-[9px] mt-2 leading-tight">Distributed via Church Bulletins. Special <b>Group-Rate Inventory</b> for Sunday Night Cinema and youth ministry block-bookings.</p>
+            </div>
+        </div>
+
+        <!-- THE LOGIC -->
+        <div class="logic-box">
+            <h3 class="text-gold font-black text-[14px] uppercase mb-2">Technical Underwriting logic: Frictionless Conversion</h3>
+            <div class="grid grid-cols-2 gap-6 text-[10px] leading-relaxed text-slate-200">
+                <div>
+                    <p class="mb-2"><span class="highlight">01. Trackable ROI:</span> Every QR code is unique to its location. We track exactly which local business is our most profitable partner, allowing for precision-budgeting of future print runs.</p>
+                    <p><span class="highlight">02. Data Capture:</span> Scanning the portal prompts the user to "Save the Pass" to their Apple/Google Wallet. This gives UCM a direct line for push-notifications for future events.</p>
+                </div>
+                <div>
+                    <p class="mb-2"><span class="highlight">03. Dynamic Pricing:</span> Portals allow us to adjust prices in real-time. If a Tuesday screening is 40% full, we can "activate" a specific community portal with a flash-sale to drive immediate traffic.</p>
+                    <p><span class="highlight">04. Scarcity Driver:</span> By labeling these as "Secret" or "Limited" offers, we increase the conversion rate from a standard 2% to a projected 15% through psychological urgency.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="mt-auto bg-gold p-4 flex justify-between items-center text-black">
+            <div class="flex-1">
+                <p class="text-[11px] font-black uppercase tracking-tighter">Engagement Strategy</p>
+                <p class="text-3xl font-black leading-none italic">PHYSICAL CARDS. DIGITAL PROFITS.</p>
+            </div>
+            <div class="text-right border-l-2 border-black pl-4">
+                <p class="text-[11px] font-black uppercase tracking-tighter">Conversion Tech</p>
+                <p class="text-3xl font-black leading-none uppercase">CLOSED-LOOP SALES</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
