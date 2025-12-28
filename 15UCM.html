@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Lender Portfolio - Page 15 (Loan Repayment Plan)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.1; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 10mm 12mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: var(--gold); color: #000; font-size: 10px; font-weight: 900; text-transform: uppercase; padding: 12px 8px; border: 1px solid var(--gold); }
+        td { border: 1px solid rgba(197, 164, 0, 0.3); padding: 10px 8px; font-size: 11px; text-align: center; font-weight: 700; }
+        .row-even { background: rgba(255, 255, 255, 0.03); }
+        .highlight-gold { color: var(--gold); font-weight: 900; }
+        
+        .summary-box { border: 2px solid var(--gold); background: rgba(197, 164, 0, 0.05); padding: 20px; margin-top: auto; }
+        .footer-tab { position: absolute; bottom: 0; right: 0; background: var(--gold); color: black; padding: 5px 20px; font-weight: 900; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <div class="flex justify-between items-end border-b-4 border-gold pb-2 mb-4">
+            <div>
+                <h1 class="text-4xl font-black tracking-tighter text-gold">REPAYMENT PLAN</h1>
+                <p class="text-[12px] uppercase tracking-[4px] text-white font-black italic">Urban Cinema Media LLC // $3,000.00 Capital Amortization</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-white">15</p>
+            </div>
+        </div>
+
+        <p class="text-[11px] text-slate-300 italic mb-4">
+            UCM is committed to a structured, 12-month aggressive repayment schedule. This plan accounts for a <span class="highlight-gold">5% annual interest rate</span>, ensuring the lender’s principal is returned with profit while maintaining healthy operational cash flow.
+        </p>
+
+        <!-- AMORTIZATION TABLE -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Payment</th>
+                    <th>Principal</th>
+                    <th>Interest (5%)</th>
+                    <th>Remaining Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row-even"><td>1</td><td>$257.00</td><td>$244.50</td><td>$12.50</td><td>$2,755.50</td></tr>
+                <tr><td>2</td><td>$257.00</td><td>$245.52</td><td>$11.48</td><td>$2,509.98</td></tr>
+                <tr class="row-even"><td>3</td><td>$257.00</td><td>$246.54</td><td>$10.46</td><td>$2,263.44</td></tr>
+                <tr><td>4</td><td>$257.00</td><td>$247.57</td><td>$9.43</td><td>$2,015.87</td></tr>
+                <tr class="row-even"><td>5</td><td>$257.00</td><td>$248.60</td><td>$8.40</td><td>$1,767.27</td></tr>
+                <tr><td>6</td><td>$257.00</td><td>$249.64</td><td>$7.36</td><td>$1,517.63</td></tr>
+                <tr class="row-even"><td>7</td><td>$257.00</td><td>$250.68</td><td>$6.32</td><td>$1,266.95</td></tr>
+                <tr><td>8</td><td>$257.00</td><td>$251.72</td><td>$5.28</td><td>$1,015.23</td></tr>
+                <tr class="row-even"><td>9</td><td>$257.00</td><td>$252.77</td><td>$4.23</td><td>$762.46</td></tr>
+                <tr><td>10</td><td>$257.00</td><td>$253.82</td><td>$3.18</td><td>$508.64</td></tr>
+                <tr class="row-even"><td>11</td><td>$257.00</td><td>$254.88</td><td>$2.12</td><td>$253.76</td></tr>
+                <tr class="bg-gold/20"><td>12</td><td>$254.82</td><td>$253.76</td><td>$1.06</td><td class="highlight-gold">$0.00</td></tr>
+            </tbody>
+        </table>
+
+        <!-- REPAYMENT LOGIC -->
+        <div class="summary-box mt-6">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gold font-black text-[14px] uppercase mb-2">Primary Repayment Source</h3>
+                    <p class="text-[10px] leading-relaxed text-slate-300">
+                        Monthly payments are derived directly from the <b>Concession Revenue Stream</b> ($1,600/mo avg). This ensures that even if attendance hits only 20% of projections, the debt service remains fully covered.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-gold font-black text-[14px] uppercase mb-2">Secondary Collateral</h3>
+                    <p class="text-[10px] leading-relaxed text-slate-300">
+                        The physical equipment (20ft Screen, 4K Projector, Sound Array) maintains a resale value of approximately $2,200 (73% of loan value) throughout the first operational year.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-tab">PAGE 15</div>
+    </div>
+</body>
+</html>
