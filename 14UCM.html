@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Lender Portfolio - Page 14 (Visual Marketing Grid)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+            --grid-line: rgba(197, 164, 0, 0.4);
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.1; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 10mm 12mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; }
+        
+        /* Grid Design */
+        .marketing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1px;
+            background-color: var(--grid-line);
+            flex-grow: 1;
+            border: 1px solid var(--grid-line);
+        }
+        .grid-cell {
+            background-color: var(--midnight);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .roi-header { font-size: 28px; font-weight: 900; color: var(--gold); line-height: 1; }
+        .channel-name { font-size: 14px; font-weight: 800; text-transform: uppercase; color: #fff; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 2px; margin-bottom: 5px; }
+        .channel-desc { font-size: 10px; color: #cbd5e1; line-height: 1.3; }
+        
+        .footer-tab { position: absolute; bottom: 0; right: 0; background: var(--gold); color: black; padding: 5px 20px; font-weight: 900; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <div class="flex justify-between items-end border-b-4 border-gold pb-2 mb-4">
+            <div>
+                <h1 class="text-4xl font-black tracking-tighter text-gold">MARKETING GRID</h1>
+                <p class="text-[12px] uppercase tracking-[4px] text-white font-black italic">Urban Cinema Media LLC // Performance Matrix</p>
+            </div>
+            <div class="text-right">
+                <p class="text-4xl font-black text-white">14</p>
+            </div>
+        </div>
 
+        <!-- HIGH DENSITY GRID -->
+        <div class="marketing-grid">
+            <!-- CELL 1: FACEBOOK -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">Facebook Ads</p>
+                    <p class="channel-desc">Hyper-local geo-fencing (5-mile radius around event site) with dynamic re-targeting for abandoned carts.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">300% ROI</p>
+                </div>
+            </div>
+
+            <!-- CELL 2: RADIO -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">Local Radio</p>
+                    <p class="channel-desc">Drive-time frequency on Top-40 and News/Talk stations. High trust factor for the family demographic.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">150% ROI</p>
+                </div>
+            </div>
+
+            <!-- CELL 3: UNIVERSITY -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">University PR</p>
+                    <p class="channel-desc">Direct outreach to MSU Student Life and Greek organizations for "Private Pasture" block booking.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">200% ROI</p>
+                </div>
+            </div>
+
+            <!-- CELL 4: SPONSORSHIPS -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">Sponsorships</p>
+                    <p class="channel-desc">On-screen pre-roll ads for local businesses. High-margin revenue with zero variable cost.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">250% ROI</p>
+                </div>
+            </div>
+
+            <!-- CELL 5: FLYERS -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">Tactical Print</p>
+                    <p class="channel-desc">High-quality cardstock flyers placed in "Community Hubs" (Salons, Gas Stations) with unique Portal QRs.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">120% ROI</p>
+                </div>
+            </div>
+
+            <!-- CELL 6: WOM -->
+            <div class="grid-cell">
+                <div>
+                    <p class="channel-name">Word of Mouth</p>
+                    <p class="channel-desc">The "Viral Loop." Social sharing rewards and referral discounts driven by exclusive event quality.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] uppercase font-bold text-slate-400">Projected Performance</p>
+                    <p class="roi-header">100% ROI</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER TEXT -->
+        <div class="mt-4 p-4 border-t-2 border-gold">
+            <p class="text-[10px] text-slate-300 leading-relaxed italic">
+                *ROI projections are based on historical performance of outdoor cinema benchmarks in the Southeastern US region, adjusted for the unique student-to-resident ratio of the Golden Triangle. All marketing spends are tracked via unique QR identifiers to ensure real-time budget optimization.
+            </p>
+        </div>
+
+        <div class="footer-tab">PAGE 14</div>
+    </div>
+</body>
+</html>
