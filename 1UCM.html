@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Lender Portfolio - Page 01 (Cover)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 20px double var(--gold);
+            padding: 20mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            overflow: hidden;
+        }
+        .gold-glow {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(197, 164, 0, 0.15) 0%, transparent 70%);
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+        }
+        h1 { font-family: 'Playfair Display', serif; line-height: 0.8; }
+        .letter-spacing-custom { letter-spacing: 0.2em; }
+        .footer-tab { position: absolute; bottom: 0; right: 0; background: var(--gold); color: black; padding: 5px 20px; font-weight: 900; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="gold-glow"></div>
+        
+        <div class="text-center z-10">
+            <p class="text-gold font-black uppercase letter-spacing-custom text-xl mb-4">Capital Investment Portfolio</p>
+            <h1 class="text-8xl font-black text-white tracking-tighter mb-2">URBAN</h1>
+            <h1 class="text-8xl font-black text-gold tracking-tighter mb-6">CINEMA</h1>
+            <h1 class="text-6xl font-black text-white tracking-widest italic mb-12">MEDIA</h1>
+            
+            <div class="w-48 h-1 bg-gold mx-auto mb-12"></div>
+            
+            <p class="text-2xl font-black text-white uppercase tracking-[10px] mb-2">2025 // 2026</p>
+            <p class="text-lg font-bold text-gold uppercase tracking-widest italic">The Future of Local Entertainment</p>
+        </div>
+
+        <div class="absolute bottom-20 text-center w-full left-0 px-20">
+            <div class="flex justify-between items-end border-t border-gold/40 pt-8">
+                <div class="text-left">
+                    <p class="text-[10px] font-black uppercase text-gold">Proposed To:</p>
+                    <p class="text-lg font-black text-white">Commercial Lending Dept.</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-[10px] font-black uppercase text-gold">Principal:</p>
+                    <p class="text-lg font-black text-white">Gabreale Randolph</p>
+                </div>
+            </div>
+            <p class="mt-12 text-[10px] uppercase tracking-[5px] text-slate-500 font-bold">Confidential & Proprietary</p>
+        </div>
+
+        <div class="footer-tab">PAGE 01</div>
+    </div>
+</body>
+</html>
