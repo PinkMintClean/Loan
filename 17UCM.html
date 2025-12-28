@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UCM Lender Portfolio - Page 17 (The Pledge)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        :root {
+            --midnight: #01040a;
+            --gold: #c5a400;
+            --silver: #ffffff;
+        }
+        body { margin: 0; padding: 0; background-color: #000; font-family: 'Montserrat', sans-serif; color: var(--silver); line-height: 1.4; }
+        .page {
+            width: 210mm; height: 297mm; margin: 0 auto;
+            background-color: var(--midnight);
+            border: 15px double var(--gold);
+            padding: 15mm 20mm; position: relative; box-sizing: border-box;
+            display: flex; flex-direction: column;
+            justify-content: center;
+        }
+        h1 { font-family: 'Playfair Display', serif; color: var(--gold); text-transform: uppercase; line-height: 0.9; text-align: center; }
+        
+        .pledge-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-style: italic;
+            text-align: center;
+            color: var(--silver);
+            line-height: 1.6;
+            margin: 40px 0;
+            position: relative;
+        }
+        .pledge-text::before, .pledge-text::after {
+            content: '"';
+            font-size: 80px;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+        }
+        .pledge-text::before { top: -40px; left: -20px; }
+        .pledge-text::after { bottom: -80px; right: -20px; }
+
+        .signature-line {
+            margin-top: 80px;
+            border-top: 2px solid var(--gold);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .seal {
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: var(--gold);
+            text-align: center;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: rotate(-15deg);
+        }
+        
+        .footer-tab { position: absolute; bottom: 0; right: 0; background: var(--gold); color: black; padding: 5px 20px; font-weight: 900; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- HEADER -->
+        <div class="mb-12">
+            <h1 class="text-5xl font-black tracking-tighter text-gold italic uppercase">The Pledge</h1>
+            <div class="h-1 bg-gold w-32 mx-auto mt-4"></div>
+        </div>
+
+        <!-- PLEDGE CONTENT -->
+        <div class="pledge-text">
+            “I, Gabreale Randolph, pledge full accountability and transparency in the execution of this project. This loan will directly fund the infrastructure and licensing necessary to establish a profitable, community-centered entertainment enterprise.”
+        </div>
+
+        <p class="text-center text-[12px] uppercase tracking-[4px] text-slate-400 font-bold mb-12">
+            Urban Cinema Media LLC // Executive Commitment
+        </p>
+
+        <!-- SIGNATURE AREA -->
+        <div class="signature-line">
+            <p class="text-gold font-black uppercase text-[14px] tracking-widest">Gabreale Randolph, CEO</p>
+            <p class="text-[10px] text-slate-500 uppercase mt-1">Founder & Managing Member</p>
+        </div>
+
+        <div class="flex justify-between items-center w-2/3 mx-auto mt-12">
+            <div class="text-center">
+                <p class="border-b border-gold w-48 mb-2"></p>
+                <p class="text-[10px] text-gold font-bold uppercase">Date of Execution</p>
+            </div>
+            <div class="seal">
+                Official<br>UCM<br>Guarantee
+            </div>
+        </div>
+
+        <div class="mt-auto text-center">
+            <p class="text-[9px] text-slate-500 italic">
+                This document is a formal declaration of intent and business ethics.
+            </p>
+        </div>
+
+        <div class="footer-tab">PAGE 17</div>
+    </div>
+</body>
+</html>
